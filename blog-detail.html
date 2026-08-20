@@ -28,17 +28,22 @@
     }
 
     .hero-overlay {
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)), url('images/blogs/15-common-laundry-mistakes-3.webp') center/cover no-repeat;
+        background: url('images/blogs/15-common-laundry-mistakes-3.webp') center/cover no-repeat;
         width: 100%;
-        height: 400px;
+        height: 410px;
         color: white;
         position: relative;
     }
 
     .hero-overlay-content {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
+        text-align: left;
+    }
+
+    .heading-content-wrapper {
+        max-width: 100%;
+        margin-top: 20px;
+        border: 2px solid #dbdbdb;
+        padding: 30px 20px;
     }
 
     .category {
@@ -218,15 +223,19 @@
     <section class="section-container" style="padding: 120px 0 60px;">
         <header class="blog-hero">
             <div class="hero-overlay">
-                <div class="hero-overlay-content">
+                
+            </div>
+        </header>
+
+        <section class="heading-content-wrapper slide-up">
+            <div class="hero-overlay-content">
                     <span class="category">Fabric Care</span>
                     <h1>15 Common Laundry Mistakes That Ruin Your Clothes (And How to Avoid Them)</h1>
                     <div class="post-meta">
                         <span>By Vatsal Mishra</span> • <span>Aug 11, 2026</span> • <span>5 min read</span>
                     </div>
                 </div>
-            </div>
-        </header>
+        </section>
 
         <main class="content-wrapper slide-up">
             <section class="intro slide-up">
