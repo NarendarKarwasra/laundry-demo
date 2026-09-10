@@ -1210,63 +1210,6 @@
   </div>
 
   <!-- testimonial Video Play Script -->
-  <!-- <script>
-    (function () {
-
-      var modal = document.getElementById('videoModal');
-      var backdrop = document.getElementById('videoModalBackdrop');
-      var closeBtn = document.getElementById('videoModalClose');
-      var frame = document.getElementById('videoModalFrame');
-
-      var cards = document.querySelectorAll('.video-card');
-
-      cards.forEach(function (card) {
-
-        card.addEventListener('click', function (e) {
-
-          e.preventDefault();
-
-          var videoId = card.getAttribute('data-video-id');
-
-          frame.innerHTML =
-            '<iframe src="https://www.youtube.com/embed/' +
-            videoId +
-            '?autoplay=1&rel=0" ' +
-            'title="Partner video" ' +
-            'frameborder="0" ' +
-            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
-            'allowfullscreen></iframe>';
-
-          modal.classList.add('is-open');
-
-        });
-
-      });
-
-
-      function closeModal() {
-
-        modal.classList.remove('is-open');
-        frame.innerHTML = '';
-
-      }
-
-
-      backdrop.addEventListener('click', closeModal);
-      closeBtn.addEventListener('click', closeModal);
-
-
-      document.addEventListener('keydown', function (e) {
-
-        if (e.key === 'Escape') {
-          closeModal();
-        }
-
-      });
-
-    })();
-  </script> -->
-
   <script>
     (function () {
       var viewport = document.getElementById('vtViewport');
@@ -1328,7 +1271,6 @@
       });
     })();
   </script>
-
 
   <!-- counter for hero section -->
   <script>
@@ -1410,9 +1352,6 @@
     });
   </script>
 
-
-
-
   <!-- vvs Video Play Script -->
   <script>
     (function () {
@@ -1433,7 +1372,6 @@
       });
     })();
   </script>
-
 
   <!-- reserve countdown -->
   <script>
@@ -1472,18 +1410,6 @@
     })();
   </script>
 
-  <!-- reserve form -->
-  <script>
-    var reserveForm = document.getElementById('reserveForm');
-    if (reserveForm) {
-      reserveForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        // TODO: wire this up to your backend / form handler
-        alert('Thanks! We will reach out shortly.');
-      });
-    }
-  </script>
-
   <!-- faq -->
   <script>
     (function () {
@@ -1505,7 +1431,6 @@
       });
     })();
   </script>
-
 
   <!-- for 3 phone screen -->
   <script>
@@ -1553,8 +1478,7 @@
     })();
   </script>
 
-
-<!-- scroll animatiom -->
+  <!-- scroll animatiom -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
 
@@ -1579,6 +1503,183 @@
       });
     });
   </script>
+
+
+
+
+
+
+
+  <!-- OTP Modal -->
+  <div class="otp-overlay" id="otpOverlay">
+    <div class="otp-modal">
+      <button type="button" class="otp-close" id="otpClose" aria-label="Close">&times;</button>
+
+      <h3 class="otp-title">Verify Your Number</h3>
+      <p class="otp-subtitle">Enter the 6-digit code sent to <strong id="otpPhoneDisplay">your phone</strong></p>
+
+      <div class="otp-inputs" id="otpInputs">
+        <input type="text" inputmode="numeric" maxlength="1" class="otp-box" data-index="0">
+        <input type="text" inputmode="numeric" maxlength="1" class="otp-box" data-index="1">
+        <input type="text" inputmode="numeric" maxlength="1" class="otp-box" data-index="2">
+        <input type="text" inputmode="numeric" maxlength="1" class="otp-box" data-index="3">
+        <input type="text" inputmode="numeric" maxlength="1" class="otp-box" data-index="4">
+        <input type="text" inputmode="numeric" maxlength="1" class="otp-box" data-index="5">
+      </div>
+
+      <p class="otp-error" id="otpError"></p>
+      <button type="button" class="otp-resend" id="otpResend">Resend code in <span
+          id="resendCountdown">30</span>s</button>
+
+      <button type="button" class="btn btn-primary otp-submit" id="otpSubmit">Verify &amp; Reserve Seat</button>
+    </div>
+  </div>
+
+
+  <script>
+    (function () {
+      var reserveForm = document.getElementById('reserveForm');
+      var reserveSection = document.getElementById('reserve');
+      var otpOverlay = document.getElementById('otpOverlay');
+      var otpClose = document.getElementById('otpClose');
+      var otpInputs = Array.prototype.slice.call(document.querySelectorAll('.otp-box'));
+      var otpError = document.getElementById('otpError');
+      var otpSubmit = document.getElementById('otpSubmit');
+      var otpResend = document.getElementById('otpResend');
+      var otpPhoneDisplay = document.getElementById('otpPhoneDisplay');
+      var thankyouSection = document.getElementById('thankyouSection');
+
+      var OTP_EXPIRY_SECONDS = 120;
+      var RESEND_COOLDOWN_SECONDS = 30;
+      var expiryTimer, resendTimer, formDataSnapshot;
+
+      if (!reserveForm) return;
+
+      reserveForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        formDataSnapshot = new FormData(reserveForm);
+        otpPhoneDisplay.textContent = maskPhone(formDataSnapshot.get('phone') || '');
+
+        // TODO: call your backend to actually send the OTP
+        // sendOtp(formDataSnapshot.get('phone'));
+
+        openOtpModal();
+      });
+
+      function maskPhone(phone) {
+        var digits = phone.replace(/\D/g, '');
+        return digits.length >= 4 ? 'XXXXXX' + digits.slice(-4) : phone;
+      }
+
+      function openOtpModal() {
+        otpOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        resetOtpInputs();
+        startResendCooldown();
+        otpInputs[0].focus();
+      }
+
+      function closeOtpModal() {
+        otpOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        clearInterval(expiryTimer);
+        clearInterval(resendTimer);
+      }
+
+      otpClose.addEventListener('click', closeOtpModal);
+      otpOverlay.addEventListener('click', function (e) {
+        if (e.target === otpOverlay) closeOtpModal();
+      });
+
+      function resetOtpInputs() {
+        otpInputs.forEach(function (input) { input.value = ''; });
+        otpError.classList.remove('visible');
+        otpSubmit.disabled = false;
+      }
+
+      function startResendCooldown() {
+        clearInterval(resendTimer);
+        var remaining = RESEND_COOLDOWN_SECONDS;
+        otpResend.disabled = true;
+        updateResendDisplay(remaining);
+        resendTimer = setInterval(function () {
+          remaining--;
+          updateResendDisplay(remaining);
+          if (remaining <= 0) {
+            clearInterval(resendTimer);
+            otpResend.disabled = false;
+            otpResend.textContent = 'Resend code';
+          }
+        }, 1000);
+      }
+
+      function updateResendDisplay(seconds) {
+        otpResend.innerHTML = 'Resend code in <span id="resendCountdown">' + seconds + '</span>s';
+      }
+
+      otpResend.addEventListener('click', function () {
+        if (otpResend.disabled) return;
+        // TODO: call your backend to resend the OTP
+        // sendOtp(formDataSnapshot.get('phone'));
+        resetOtpInputs();
+        startResendCooldown();
+        otpInputs[0].focus();
+      });
+
+      otpInputs.forEach(function (input, idx) {
+        input.addEventListener('input', function () {
+          input.value = input.value.replace(/\D/g, '').slice(0, 1);
+          if (input.value && idx < otpInputs.length - 1) otpInputs[idx + 1].focus();
+        });
+
+        input.addEventListener('keydown', function (e) {
+          if (e.key === 'Backspace' && !input.value && idx > 0) otpInputs[idx - 1].focus();
+        });
+
+        input.addEventListener('paste', function (e) {
+          e.preventDefault();
+          var pasted = (e.clipboardData || window.clipboardData).getData('text').replace(/\D/g, '');
+          pasted.split('').slice(0, otpInputs.length).forEach(function (char, i) {
+            otpInputs[i].value = char;
+          });
+          otpInputs[Math.min(pasted.length, otpInputs.length - 1)].focus();
+        });
+      });
+
+      otpSubmit.addEventListener('click', function () {
+        var code = otpInputs.map(function (i) { return i.value; }).join('');
+        if (code.length < 6) {
+          showError('Please enter all 6 digits.');
+          return;
+        }
+
+        // TODO: replace with a real backend verification call
+        // verifyOtp(formDataSnapshot.get('phone'), code).then(function(isValid) { ... });
+        var isValid = true; // mock — always accepts for now
+
+        if (isValid) {
+          submitReservation();
+        } else {
+          showError('Incorrect code. Please try again.');
+          otpInputs.forEach(function (i) { i.value = ''; });
+          otpInputs[0].focus();
+        }
+      });
+
+      function showError(msg) {
+        otpError.textContent = msg;
+        otpError.classList.add('visible');
+      }
+
+      function submitReservation() {
+        // TODO: send formDataSnapshot to your backend / form handler here
+        window.location.href = 'thank-you.html';
+      }
+    })();
+  </script>
+
+
+
 
 </body>
 
