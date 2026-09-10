@@ -1900,6 +1900,11 @@ a {
     background-color: var(--white);
 }
 
+.form-select:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
 .reserve-submit {
     width: 100%;
     margin-top: 0.5rem;

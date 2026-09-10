@@ -857,10 +857,15 @@
 
         <div class="form-row">
           <div class="form-field">
-            <input type="text" class="form-input" name="state" placeholder="State" required>
+            <select class="form-select" name="state" id="stateSelect" required>
+              <option value="" selected disabled>State</option>
+              <!-- options injected by JS -->
+            </select>
           </div>
           <div class="form-field">
-            <input type="text" class="form-input" name="city" placeholder="City" required>
+            <select class="form-select" name="city" id="citySelect" required disabled>
+              <option value="" selected disabled>Select state first</option>
+            </select>
           </div>
         </div>
 
@@ -1535,7 +1540,7 @@
     </div>
   </div>
 
-<!-- reserve form, otp model -->
+  <!-- reserve form, otp model -->
   <script>
     (function () {
       var reserveForm = document.getElementById('reserveForm');
@@ -1554,6 +1559,80 @@
       var expiryTimer, resendTimer, formDataSnapshot;
 
       if (!reserveForm) return;
+
+      var stateSelect = document.getElementById('stateSelect');
+      var citySelect = document.getElementById('citySelect');
+
+      var stateCityData = {
+        "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur", "Nellore", "Tirupati"],
+        "Arunachal Pradesh": ["Itanagar", "Naharlagun"],
+        "Assam": ["Guwahati", "Dibrugarh", "Silchar", "Jorhat"],
+        "Bihar": ["Patna", "Gaya", "Bhagalpur", "Muzaffarpur"],
+        "Chhattisgarh": ["Raipur", "Bhilai", "Bilaspur", "Durg"],
+        "Goa": ["Panaji", "Margao", "Vasco da Gama"],
+        "Gujarat": ["Ahmedabad", "Surat", "Vadodara", "Rajkot", "Bhavnagar"],
+        "Haryana": ["Gurugram", "Faridabad", "Panipat", "Ambala", "Karnal"],
+        "Himachal Pradesh": ["Shimla", "Manali", "Dharamshala"],
+        "Jharkhand": ["Ranchi", "Jamshedpur", "Dhanbad", "Bokaro"],
+        "Karnataka": ["Bengaluru", "Mysuru", "Mangaluru", "Hubballi", "Belagavi"],
+        "Kerala": ["Kochi", "Thiruvananthapuram", "Kozhikode", "Thrissur"],
+        "Madhya Pradesh": ["Indore", "Bhopal", "Jabalpur", "Gwalior", "Ujjain"],
+        "Maharashtra": ["Mumbai", "Pune", "Nagpur", "Nashik", "Thane", "Aurangabad"],
+        "Manipur": ["Imphal"],
+        "Meghalaya": ["Shillong"],
+        "Mizoram": ["Aizawl"],
+        "Nagaland": ["Kohima", "Dimapur"],
+        "Odisha": ["Bhubaneswar", "Cuttack", "Rourkela"],
+        "Punjab": ["Ludhiana", "Amritsar", "Jalandhar", "Patiala", "Mohali"],
+        "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur", "Kota", "Ajmer"],
+        "Sikkim": ["Gangtok"],
+        "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem"],
+        "Telangana": ["Hyderabad", "Warangal", "Nizamabad"],
+        "Tripura": ["Agartala"],
+        "Uttar Pradesh": ["Lucknow", "Kanpur", "Noida", "Ghaziabad", "Agra", "Varanasi"],
+        "Uttarakhand": ["Dehradun", "Haridwar", "Rishikesh"],
+        "West Bengal": ["Kolkata", "Howrah", "Durgapur", "Siliguri"],
+        "Delhi": ["New Delhi", "Dwarka", "Rohini", "Saket"],
+        "Jammu and Kashmir": ["Srinagar", "Jammu"],
+        "Ladakh": ["Leh", "Kargil"],
+        "Chandigarh": ["Chandigarh"],
+        "Puducherry": ["Puducherry"]
+      };
+
+      // Populate state dropdown
+      Object.keys(stateCityData).sort().forEach(function (state) {
+        var opt = document.createElement('option');
+        opt.value = state;
+        opt.textContent = state;
+        stateSelect.appendChild(opt);
+      });
+
+      // Populate city dropdown on state change
+      stateSelect.addEventListener('change', function () {
+        var cities = stateCityData[stateSelect.value] || [];
+        citySelect.innerHTML = '';
+        citySelect.disabled = false;
+
+        var placeholder = document.createElement('option');
+        placeholder.value = '';
+        placeholder.textContent = 'City';
+        placeholder.selected = true;
+        placeholder.disabled = true;
+        citySelect.appendChild(placeholder);
+
+        cities.sort().forEach(function (city) {
+          var opt = document.createElement('option');
+          opt.value = city;
+          opt.textContent = city;
+          citySelect.appendChild(opt);
+        });
+
+        // Always allow "Other" in case their city isn't listed
+        var otherOpt = document.createElement('option');
+        otherOpt.value = "Other";
+        otherOpt.textContent = "Other";
+        citySelect.appendChild(otherOpt);
+      });
 
       reserveForm.addEventListener('submit', function (e) {
         e.preventDefault();
