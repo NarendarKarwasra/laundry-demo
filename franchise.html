@@ -17,1152 +17,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="new-style.css">
     <link rel="stylesheet" href="responsive.css">
 
 </head>
 
 
-<style>
-    /* franchise page */
-
-    .franchise-hero-section {
-        padding-top: 80px;
-    }
-
-    .franchise-hero {
-        background: url('images/franchise-hero-3.webp');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 20px 0;
-    }
-
-    .fran-hero-conatiner {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #fff;
-    }
-
-    .fran-hero-content {
-        width: 59%;
-    }
-
-    .fran-hero-conatiner h1 {
-        font-weight: 900;
-        line-height: 1.3;
-        margin-bottom: 10px;
-    }
-
-    .fran-hero-conatiner h1 span {
-        font-size: 46px;
-    }
-
-    .fran-hero-conatiner p {
-        font-size: 18px;
-        line-height: 1.4;
-        margin-bottom: 10px;
-    }
-
-    .fran-hero-content ul {
-        margin-bottom: 20px;
-        margin-left: 20px;
-    }
-
-    .fran-hero-content ul li {
-        font-size: 17px;
-        list-style-type: square;
-    }
-
-    .fran-hero-box {
-        display: flex;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .fran-hero-box-card {
-        background: #ffffff33;
-        color: #ffffff;
-        border-radius: 14px;
-        /* width: 100px; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* justify-content: center; */
-        padding: 10px 20px;
-    }
-
-    .fran-hero-box-card h2 {
-        font-size: 30px;
-        font-weight: 800;
-    }
-
-    .fran-hero-box-card h2 span {
-        font-weight: 600;
-        font-size: 20px;
-        margin-left: 4px;
-    }
-
-    .fran-hero-box-card p {
-        margin-bottom: 2px;
-        font-weight: 600;
-    }
-
-    .fran-hero-box-card div {
-        text-align: center;
-        line-height: 1.2;
-        margin-top: 4px;
-    }
-
-
-    .fran-hero-form {
-        width: 39%;
-    }
-
-    .form-container {
-        background: #fff;
-        padding: 20px 26px;
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-    }
-
-    .form-container h2 {
-        color: #535353;
-        line-height: 1.3;
-    }
-
-    .form-container .form-subtitle {
-        color: #676767;
-        margin-bottom: 20px;
-        font-size: 15px;
-        margin-top: 5px;
-    }
-
-    .form-row {
-        display: flex;
-        gap: 14px;
-        margin-bottom: 14px;
-    }
-
-    .input-box {
-        flex: 1;
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
-
-    .input-box i {
-        position: absolute;
-        left: 15px;
-        color: #de8d1f;
-        font-size: 16px;
-    }
-
-    #investmentForm input,
-    #investmentForm select,
-    #investmentForm textarea {
-        width: 100%;
-        height: 46px;
-        padding: 0px 0px 0px 40px;
-        border: 2px solid #e4e4e4;
-        border-radius: 6px;
-        font-size: 15px;
-        transition: all 0.3s ease;
-        background: #f3f3f3;
-        color: #676767;
-    }
-
-    #investmentForm textarea {
-        height: 80px;
-    }
-
-    #investmentForm input:focus,
-    #investmentForm select:focus,
-    #investmentForm textarea:focus {
-        border-color: #de8d1f;
-        background: #fff;
-        outline: none;
-        box-shadow: 0 0 10px rgba(222, 141, 31, 0.1);
-    }
-
-    #investmentForm textarea {
-        padding-top: 12px;
-    }
-
-    #investmentForm #submitBtn {
-        width: 100%;
-        height: 50px;
-        background: #de8d1f;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        font-weight: 700;
-        cursor: pointer;
-        font-size: 16px;
-        transition: 0.3s;
-        margin-top: 10px;
-    }
-
-    #investmentForm #submitBtn:disabled {
-        background: #ccc;
-        cursor: not-allowed;
-        transform: none;
-    }
-
-    #investmentForm #submitBtn:hover:not(:disabled) {
-        background: #c27a1a;
-        transform: translateY(-2px);
-    }
-
-    #investmentForm .error-text {
-        color: #e74c3c;
-        font-size: 12px !important;
-        margin-bottom: 8px !important;
-        display: block;
-        font-weight: 500;
-    }
-
-    .form-trust-line {
-        color: #8a8a8a;
-        margin-top: 6px;
-        text-align: center;
-        font-size: 14px;
-    }
-
-
-
-
-    .otp-modal-overlay {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 1000;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .otp-modal-content {
-        background: #fff;
-        padding: 30px;
-        border-radius: 12px;
-        width: 90%;
-        max-width: 400px;
-        text-align: center;
-        position: relative;
-    }
-
-    .otp-inputs {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        margin: 20px 0;
-    }
-
-    .otp-digit {
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        font-size: 20px;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-    }
-
-    .verify-btn {
-        background: #de8d1f;
-        color: white;
-        border: none;
-        padding: 12px 25px;
-        border-radius: 6px;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .close-modal {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        font-size: 24px;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-
-
-
-    /* Mobile Responsive */
-    @media (max-width: 992px) {
-        .form-row {
-            flex-direction: column;
-            gap: 15px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .fran-hero-conatiner {
-            flex-direction: column-reverse;
-        }
-
-        .fran-hero-content {
-            width: 100%;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .fran-hero-content ul {
-            text-align: left;
-            max-width: 520px;
-            margin: auto;
-            margin-bottom: 20px;
-            padding-left: 10px;
-        }
-
-        .fran-hero-form {
-            width: 100%;
-            margin-top: 30px;
-        }
-
-    }
-
-
-
-    @media (max-width: 500px) {
-        .fran-hero-box {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .investment-stats {
-        padding: 30px 0 40px;
-    }
-
-    .section-subtitle {
-        text-align: center;
-        color: #777;
-        max-width: 1000px;
-        margin: auto;
-        margin-top: 10px;
-        font-size: 17px;
-        line-height: 1.4;
-    }
-
-    .investment-stats .stats-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 20px;
-    }
-
-    .investment-stats .stat-card {
-        background: #fff;
-        padding: 20px 10px;
-        border-radius: 6px;
-        text-align: center;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-        border-bottom: 5px solid #e9e2d7;
-    }
-
-    .investment-stats .stat-card:hover {
-        transform: translateY(-6px);
-    }
-
-    .investment-stats .icon-box {
-        font-size: 2.4rem;
-        margin-bottom: 10px;
-        color: #de8d1f;
-    }
-
-    .investment-stats .stat-card h3 {
-        font-size: 1.3rem;
-        margin: 10px 0 6px;
-    }
-
-    .investment-stats .stat-card p {
-        font-size: 18px;
-    }
-
-    .investment-stats .stat-card-desc {
-        line-height: 1.3;
-        margin: 10px 0;
-        opacity: 0.8;
-    }
-
-    .investment-stats .badge {
-        display: inline-block;
-        padding: 5px 15px;
-        background: #f5f1ec;
-        color: #b06907;
-        border-radius: 50px;
-        font-size: 0.9rem;
-        margin-top: 15px;
-    }
-
-
-    @media (max-width: 992px) {
-        .investment-stats .stats-grid {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-
-    @media (max-width: 500px) {
-        .investment-stats .stats-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-
-
-
-
-
-    .partners-section {
-        padding: 30px 0 50px;
-    }
-
-    .partners-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 50px;
-        margin-top: 40px;
-    }
-
-    .partners-image {
-        width: 40%;
-        border: 6px solid #f1b868;
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    .partners-image img {
-        width: 100%;
-        transform: scale(1.05);
-    }
-
-    .partners-content {
-        width: 60%;
-        gap: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .partners-card {
-        position: relative;
-        /* border: 1px solid #d6d0c7; */
-        background: #faf9f9;
-        border-radius: 6px;
-        padding: 10px 20px;
-        box-shadow: 0 4px 10px #4a4a4a26;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .partners-card:hover {
-        transform: scale(1.03);
-    }
-
-    .partners-card h3 {
-        font-size: 20px;
-    }
-
-    .partners-card p {
-        font-size: 17px;
-        line-height: 1.3;
-        margin-top: 4px;
-        opacity: 0.8;
-    }
-
-    .partners-card i {
-        color: #de8d1f;
-        font-size: 50px;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        opacity: 0.2;
-        transform: translateY(-50%);
-    }
-
-
-    @media (max-width: 992px) {
-        .partners-container {
-            flex-direction: column;
-        }
-
-        .partners-image {
-            display: none;
-        }
-
-        .partners-content {
-            width: 100%;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .partners-content {
-            grid-template-columns: 1fr;
-        }
-    }
-
-
-
-
-
-
-
-
-
-    /* Video Section Styles */
-    .video-presentation {
-        position: relative;
-        overflow: hidden;
-        padding: 30px 0 40px;
-    }
-
-    .video-presentation .text-center {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .video-presentation .sub-heading {
-        display: inline-block;
-        color: #b96d02;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 1rem;
-    }
-
-    .video-presentation .main-heading {
-        font-size: 2rem;
-        font-weight: 700;
-    }
-
-    .video-wrapper {
-        position: relative;
-        max-width: 900px;
-        margin: 0 auto;
-        z-index: 1;
-    }
-
-    .video-container {
-        position: relative;
-        padding-bottom: 56%;
-        height: 0;
-        overflow: hidden;
-        border-radius: 6px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        background: #000;
-    }
-
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-    .video-glow {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 110%;
-        height: 110%;
-        background: radial-gradient(circle, rgba(0, 86, 179, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-        z-index: -1;
-    }
-
-    @media (max-width: 768px) {
-        .video-presentation {
-            padding: 50px 15px;
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-    /* Support Section Styles */
-    .support-section {
-        padding: 30px 0 40px;
-    }
-
-    .support-des {
-        text-align: center;
-        width: 80%;
-        margin: auto;
-        margin-top: 6px;
-        font-size: 17px;
-        line-height: 1.3;
-        color: #656565;
-    }
-
-    .support-flex {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        margin-top: 40px;
-    }
-
-    .support-item {
-        flex: 1;
-        min-width: 250px;
-        background: #f4e6d1;
-        padding: 26px;
-        border-radius: 6px;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.2s ease-in-out;
-    }
-
-    .support-item:hover {
-        transform: translateY(-6px);
-    }
-
-    .step-num {
-        position: absolute;
-        bottom: -10px;
-        right: 10px;
-        font-size: 3.5rem;
-        font-weight: bold;
-        color: #de8d1f;
-        opacity: 0.2;
-    }
-
-    .support-item h4 {
-        color: #de8d1f;
-        font-size: 1.3rem;
-        margin-bottom: 10px;
-    }
-
-    @media (max-width: 768px) {
-        .support-section .section-title {
-            font-size: 2rem;
-        }
-
-        .support-des {
-            width: 100%;
-        }
-    }
-
-
-
-
-
-
-
-
-    .comparison-section {
-        padding: 30px 0 40px;
-    }
-
-    .table-heading {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 20px;
-        font-weight: 600;
-        color: #de8d1f;
-    }
-
-    /* Comparison Table */
-    .comp-table {
-        width: 100%;
-        border-collapse: collapse;
-        background: #fff;
-        border-radius: 6px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        margin-top: 14px;
-    }
-
-    .comp-table th,
-    .comp-table td {
-        padding: 20px;
-        text-align: left;
-        border-bottom: 1px solid #eee;
-    }
-
-    .comp-table th {
-        background: #de8d1f;
-        color: #fff;
-    }
-
-    .comp-table td.check {
-        color: #28a745;
-        font-weight: bold;
-    }
-
-    .comp-table td.cross {
-        color: #dc3545;
-    }
-
-    .comp-table tbody tr {
-        transition: all 0.2s ease-in-out;
-    }
-
-    .comp-table tbody tr:hover {
-        background-color: #fff0dd;
-    }
-
-    .table-closing-line {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: 500;
-        color: #de8d1f;
-    }
-
-    @media (max-width: 500px) {
-
-        .comp-table th,
-        .comp-table td {
-            padding: 10px;
-        }
-    }
-
-    @media (max-width: 350px) {
-
-        .comp-table th,
-        .comp-table td {
-            padding: 4px;
-        }
-    }
-
-
-
-
-
-
-
-
-
-    .why-section {
-        padding: 30px 0 40px;
-    }
-
-    .why-container {
-        margin-top: 40px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-    }
-
-    .why-card {
-        padding: 20px;
-        border: 1px solid #dedede;
-        box-shadow: 0px 0px 30px 1px #e8e8e8;
-        text-align: center;
-        transition: all 0.2s ease-in-out;
-    }
-
-    .why-card:hover {
-        background: #fff6e9;
-        box-shadow: none;
-    }
-
-    .why-card i {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        color: #000;
-        margin-top: 10px;
-        color: #de8d1f;
-    }
-
-    .why-card p {
-        /* max-width: 300px; */
-        margin: auto;
-        line-height: 1.3;
-        margin-top: 10px;
-    }
-
-    .why-end-line {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 20px;
-        font-weight: 600;
-        color: #de8d1f;
-    }
-
-
-
-
-    @media (max-width: 768px) {
-        .why-container {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-
-    @media (max-width: 450px) {
-        .why-container {
-            grid-template-columns: 1fr;
-        }
-    }
-
-
-
-
-
-
-    .franchise-models {
-        padding: 30px 0 60px;
-    }
-
-    .franchise-models .header-content {
-        text-align: center;
-        max-width: 900px;
-        margin: 0 auto 0px;
-    }
-
-    .franchise-models .header-content h2 {
-        color: #4f4f4f;
-        margin-top: 4px;
-        margin-bottom: 6px;
-    }
-
-
-    .franchise-models .sub-text {
-        font-weight: bold;
-        color: #333;
-    }
-
-    .franchise-models .intro-text {
-        color: #858585;
-    }
-
-    .model-imp-line {
-        text-align: center;
-        font-size: 20px;
-        line-height: 1.3;
-        margin-top: 20px;
-        color: #de8d1f;
-    }
-
-
-    .models-grid {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
-        margin-top: 50px;
-    }
-
-    .model-card {
-        background: white;
-        border-radius: 12px;
-        padding: 30px;
-        width: 350px;
-        position: relative;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease;
-        border: 2px solid #eee;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .model-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-    }
-
-    .model-card.featured {
-        border-color: #de8d1f;
-        transform: scale(1.05);
-        z-index: 2;
-        box-shadow: 0 10px 10px rgba(222, 141, 31, 0.15);
-    }
-
-    .model-card.featured:hover {
-        transform: scale(1.05) translateY(-10px);
-    }
-
-    .model-card.featured:hover .icon {
-        background: #de8d1f;
-        color: #fff;
-    }
-
-    .popular-tag {
-        position: absolute;
-        top: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #de8d1f;
-        color: #fff;
-        padding: 5px 15px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: bold;
-    }
-
-    .card-header h3 {
-        font-size: 1.6rem;
-        color: #333;
-        margin-bottom: 6px;
-        text-align: center;
-    }
-
-    .card-header p {
-        font-size: 17px;
-        line-height: 1.2;
-        opacity: 0.8;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .info-row {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 20px;
-    }
-
-    .info-row .icon {
-        font-size: 1.2rem;
-        color: #de8d1f;
-        background: rgba(255, 123, 0, 0.1);
-        width: 45px;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-    }
-
-    .model-card:hover .icon {
-        background: #de8d1f;
-        color: #ffffff;
-    }
-
-
-    .info-row strong {
-        display: block;
-        font-size: 0.85rem;
-        color: #888;
-        text-transform: uppercase;
-    }
-
-    .info-row span {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #333;
-        margin-top: 6px;
-    }
-
-    .info-row.highlight span {
-        color: #de8d1f;
-        font-size: 1.3rem;
-        font-weight: 900;
-    }
-
-    .location-note {
-        font-size: 0.9rem;
-        color: #999;
-        font-style: italic;
-        margin-top: -10px;
-    }
-
-    .card-footer-line {
-        line-height: 1.3;
-        font-size: 17px;
-        opacity: 0.8;
-        border-left: 4px solid #de8d1f;
-        padding-left: 10px;
-        margin-top: 10px;
-    }
-
-
-    @media (max-width: 768px) {
-        .featured {
-            transform: scale(1);
-        }
-
-        .model-card {
-            width: 100%;
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .blog-section {
-        padding: 30px 0 40px;
-    }
-
-    .blog-header {
-        margin-bottom: 40px;
-    }
-
-    .blog-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 30px;
-    }
-
-    .blog-card {
-        background: #fff;
-        border: 1px solid #e7e7e7;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    .blog-card:hover {
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .blog-image {
-        position: relative;
-        height: 220px;
-    }
-
-    .blog-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .category-icon {
-        position: absolute;
-        bottom: -20px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-        background: #de8d1f;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 3px solid #fff;
-        font-size: 1.2rem;
-    }
-
-    .blog-content {
-        padding: 40px 25px 25px;
-        text-align: center;
-        flex-grow: 1;
-    }
-
-    .blog-content h3 {
-        color: #de8d1f;
-        text-transform: uppercase;
-        font-size: 1.1rem;
-        line-height: 1.4;
-        margin-bottom: 15px;
-        font-weight: 700;
-    }
-
-    .blog-content p {
-        color: #777;
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-    .blog-footer {
-        border-top: 1px solid #eee;
-        padding: 15px 20px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.85rem;
-        color: #de8d1f;
-        font-weight: 600;
-    }
-
-    .blog-footer i {
-        color: #de8d1f;
-        margin-right: 5px;
-    }
-
-    @media (max-width: 768px) {
-        .blog-container {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-    }
-
-
-
-
-
-
-    .franchise-testimonials .slider-viewport {
-        margin-left: 0px;
-    }
-
-    .franchise-testimonials .testimonial-card {
-        min-width: 100%;
-        border-radius: 12px;
-    }
-
-    .franchise-testimonials .testimonial-track {
-        display: flex;
-        gap: 0;
-        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-
-
-
-
-
-    .section-subtitle {
-        margin-bottom: 40px;
-    }
-
-
-
-
-
-
-    .franchise-btn {
-        border-radius: 30px !important;
-        margin-top: 20px;
-        padding: 10px 30px !important;
-    }
-
-    .blog-more-btn {
-        margin-top: 20px;
-        padding: 10px 30px !important;
-    }
-</style>
 
 <body>
 
@@ -1224,27 +84,24 @@
                 <div class="fran-hero-conatiner">
                     <div class="fran-hero-content">
                         <!-- <h1>Join India’s Profitable <br><span>Laundry Franchise Brand</span></h1> -->
-                        <h1>Join India’s Fast-Growing <br><span>Laundry Franchise Network</span></h1>
-                        <p style="margin-bottom: 0;">Build a profitable business with Cleand – The Laundry Spa.</p>
-                        <p>A professionally managed laundry and dry cleaning brand trusted by thousands of customers
-                            across multiple cities.</p>
-                        <ul>
-                            <li>Proven business model with strong demand in urban markets</li>
-                            <li>Complete setup support including machines, training and operations</li>
-                            <li>Technology driven pickup and delivery system</li>
-                            <li>Marketing and lead generation support from the central team</li>
-                        </ul>
+                        <h1><span>Start Your Laundry & Dry Cleaning Franchise Business with Cleand</span></h1>
+                        <p>Build a profitable and scalable laundry franchise business in India with complete
+                            operational, branding, and marketing support from Cleand.</p>
+                        <p>The laundry and dry cleaning industry in India is growing rapidly with increasing demand for
+                            convenient and professional garment care services. Cleand helps aspiring entrepreneurs and
+                            business owners start and grow a modern laundry franchise in India with the right support,
+                            systems, training, and operational guidance.</p>
                         <div class="fran-hero-box">
                             <div class="fran-hero-box-card">
                                 <h2>4 Lakh<span>+</span></h2>
                                 <p>Happy Customers</p>
                             </div>
                             <div class="fran-hero-box-card">
-                                <h2>45<span>+</span></h2>
+                                <h2>60<span>+</span></h2>
                                 <p>Operational Stores</p>
                             </div>
                             <div class="fran-hero-box-card">
-                                <h2>15<span>+</span></h2>
+                                <h2>25<span>+</span></h2>
                                 <p>Cities Served</p>
                             </div>
                         </div>
@@ -1327,12 +184,13 @@
 
     </section>
 
-
     <section class="investment-stats">
         <div class="section-container slide-up">
-            <h2 class="section-title">Why Invest in a <span style="color: #de8d1f;">Cleand</span> Franchise Business?
-            </h2>
-            <p class="section-subtitle">Cleand is a professionally structured, premium laundry and fabric-care franchise built for the rising demand for organized service brands. With standardized operations, centralized technology, launch support, and both retail and B2B growth opportunities, Cleand offers franchise partners a lower-execution-risk path to building a scalable local business.
+            <h2 class="section-title">Investment &amp; Business Potential</h2>
+            <p class="section-subtitle" style="margin-bottom: 0;">The laundry and dry cleaning industry offers strong
+                long-term business potential due to recurring customer demand and growing urban convenience culture.
+                Cleand franchise partners can build a scalable service business with opportunities for repeat monthly
+                revenue, local area expansion, and business growth through residential and commercial partnerships.
             </p>
 
             <div class="stats-grid slide-up">
@@ -1378,6 +236,45 @@
                 </div>
             </div>
 
+            <!-- NEW: Key business advantages -->
+            <div class="advantages-block slide-up">
+                <h3 class="advantages-title">Key Business Advantages</h3>
+                <div class="advantages-grid">
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Growing demand for organized laundry services</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Recurring customer orders</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Scalable operations</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Service-based recurring income</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Opportunity for B2B partnerships</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Expanding urban customer base</span>
+                    </div>
+                    <div class="advantage-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Increasing preference for pickup and delivery services</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW: Disclaimer -->
+            <p class="investment-note slide-up">* Investment requirements may vary depending on business model, city,
+                store size, and operational setup.</p>
+
             <p class="table-closing-line slide-up">Includes complete training, store launch support, marketing
                 assistance, and technology platform.</p>
 
@@ -1387,14 +284,13 @@
         </div>
     </section>
 
-
     <section class="partners-section" style="background: #eeeeee;">
         <div class="section-container slide-up">
-            <h2 class="section-title">What Support <span style="color: #de8d1f;">Cleand</span> Provides Franchise
-                Partners?
+            <h2 class="section-title">Why Choose <span style="color: #de8d1f;">Cleand</span> Franchise Business?
             </h2>
-            <p class="section-subtitle" style="margin-top: 14px;">We empower our partners with a robust support
-                ecosystem designed for operational efficiency and high profitability.
+            <p class="section-subtitle" style="margin-top: 14px;">Cleand focuses on helping franchise partners build a
+                professionally managed laundry and dry cleaning business with operational simplicity and long-term
+                growth potential.
             </p>
 
             <div class="partners-container">
@@ -1402,48 +298,78 @@
                     <img src="images/about-cleand-3.webp" alt="">
                 </div>
                 <div class="partners-content">
+
                     <div class="partners-card">
-                        <h3>Store Setup Assistance</h3>
-                        <p>Expert site selection, interior architectural design, and state-of-the-art machinery
-                            installation.</p>
+                        <h3>Complete Setup Support</h3>
+                        <p>From planning to launch, our team helps you set up your laundry business with proper guidance
+                            and operational support.</p>
                         <i class="fas fa-store"></i>
                     </div>
+
                     <div class="partners-card">
-                        <h3>Staff Training</h3>
-                        <p>On-site and central training for fabric handling, cleaning techniques, and customer service.
-                        </p>
+                        <h3>Store Branding Assistance</h3>
+                        <p>We help create a professional and modern brand presence for your store to build customer
+                            trust and visibility.</p>
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+
+                    <div class="partners-card">
+                        <h3>Digital Marketing Support</h3>
+                        <p>Our marketing support helps franchise partners improve local reach, customer acquisition, and
+                            online visibility.</p>
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+
+                    <div class="partners-card">
+                        <h3>Technology & Order Management</h3>
+                        <p>Cleand provides support for streamlined order handling, customer management, and operational
+                            tracking.</p>
+                        <i class="fas fa-laptop"></i>
+                    </div>
+
+                    <div class="partners-card">
+                        <h3>Operational Training</h3>
+                        <p>We guide franchise partners and staff with operational processes and service standards.</p>
                         <i class="fas fa-chalkboard-user"></i>
                     </div>
+
                     <div class="partners-card">
-                        <h3>Marketing & Lead Generation</h3>
-                        <p>Pan-India digital marketing campaigns and local brand activation support to drive customers.
+                        <h3>Pickup & Delivery System</h3>
+                        <p>Build a convenient service model with organized pickup and delivery operations.</p>
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+
+                    <div class="partners-card">
+                        <h3>Customer Acquisition Support</h3>
+                        <p>We help franchise partners build awareness and attract customers in their target areas.</p>
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+
+                    <div class="partners-card">
+                        <h3>Business Growth Guidance</h3>
+                        <p>Our support team assists partners with strategies to improve operations and business
+                            expansion.</p>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+
+                    <div class="partners-card">
+                        <h3>Standard Operating Procedures</h3>
+                        <p>We focus on standardized processes to maintain service quality and customer satisfaction.</p>
+                        <i class="fas fa-list-check"></i>
+                    </div>
+
+                    <div class="partners-card">
+                        <h3>Ongoing Support Team</h3>
+                        <p>Franchise partners receive continuous operational and business support from the Cleand team.
                         </p>
-                        <i class="fas fa-magnifying-glass-chart"></i>
+                        <i class="fas fa-headset"></i>
                     </div>
-                    <div class="partners-card">
-                        <h3>Pickup & Delivery Technology</h3>
-                        <p>Complete tech-stack including driver apps, customer booking software, and logistics
-                            management.</p>
-                        <i class="fas fa-mobile-screen-button"></i>
-                    </div>
-                    <div class="partners-card">
-                        <h3>Central Operations Support</h3>
-                        <p>Dedicated support desk for daily operational queries, chemical dosage, and quality control.
-                        </p>
-                        <i class="fas fa-gears"></i>
-                    </div>
-                    <div class="partners-card">
-                        <h3>Vendor Network</h3>
-                        <p>Access to our verified network of chemical suppliers and spare parts at discounted prices.
-                        </p>
-                        <i class="fas fa-handshake"></i>
-                    </div>
+
                 </div>
             </div>
 
         </div>
     </section>
-
 
     <section class="video-presentation" style="background: #faf6ef;">
         <div class="section-container">
@@ -1465,8 +391,41 @@
         </div>
     </section>
 
+    <section class="growth-opportunity">
+        <div class="section-container slide-up">
+            <h2 class="section-title">Why Laundry &amp; Dry Cleaning Business is a
+                <span style="color: #de8d1f;">Growing Opportunity</span>
+            </h2>
 
-    <section class="support-section">
+            <div class="growth-content slide-up">
+                <div class="growth-image">
+                    <img src=""
+                        alt="Growth comparison of India's laundry and dry cleaning industry with other industries"
+                        loading="lazy">
+                </div>
+
+                <div class="growth-text">
+                    <p>India’s laundry and dry cleaning industry is evolving quickly as customer lifestyles continue to
+                        change. Busy schedules, urban living, and rising demand for convenience services are creating
+                        strong opportunities for organized laundry businesses.</p>
+
+                    <p>Today, customers prefer professional garment care services that save time and provide better
+                        cleaning quality. Pickup and delivery services, premium fabric care, and recurring monthly usage
+                        are making laundry businesses more scalable than ever before.</p>
+
+                    <p>The demand is growing across residential societies, working professionals, students, families,
+                        hotels, salons, gyms, restaurants, and corporate offices. Unlike many traditional businesses,
+                        laundry services also benefit from repeat customers and consistent monthly demand.</p>
+
+                    <p>With low inventory wastage, growing urban demand, and scalable operational models, the laundry
+                        business has become one of the fastest-growing service industries in India.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="support-section">
         <div class="section-container slide-up">
             <h2 class="section-title">Our Franchise Support System</h2>
             <p class="support-des"><strong>Cleand</strong> – The Laundry Spa provides franchise partners with a complete
@@ -1500,60 +459,206 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-
-    <section class="comparison-section" style="background: #faf6ef;">
+    <section class="franchise-process">
         <div class="section-container slide-up">
-            <h2 class="section-title">Why Choose a Cleand Franchise Over an Independent Laundry?</h2>
-            <p class="support-des">Starting an independent laundry business can be challenging due to lack of brand
-                recognition, operational systems, and marketing support. A Cleand franchise provides a structured and
-                professionally managed business model designed to reduce risk and increase success.</p>
-            <div class="table-responsive slide-up">
-                <div class="table-heading">Why struggle alone when you can grow with a proven brand?</div>
-                <table class="comp-table">
-                    <thead>
-                        <tr>
-                            <th>Features</th>
-                            <th>Cleand Franchise</th>
-                            <th>Local Laundry Shop</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Brand Awareness</td>
-                            <td class="check">✅ Established Brand Recognition</td>
-                            <td class="cross">❌ Limited Customer Trust</td>
-                        </tr>
-                        <tr>
-                            <td>Technology</td>
-                            <td class="check">✅ Integrated Mobile App & CRM System</td>
-                            <td class="cross">❌ Manual Registers & Limited Tracking</td>
-                        </tr>
-                        <tr>
-                            <td>Machinery</td>
-                            <td class="check">✅ Industrial Grade Professional Equipment</td>
-                            <td class="cross">❌ Basic Household Machines</td>
-                        </tr>
-                        <tr>
-                            <td>Marketing Support</td>
-                            <td class="check">✅ Centralized Digital Marketing & Campaigns</td>
-                            <td class="cross">❌ Limited Local Promotions</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h2 class="section-title">How the <span style="color: #de8d1f;">Cleand</span> Laundry Franchise Works</h2>
+            <p class="section-subtitle">Cleand follows a structured operational process designed to deliver convenient
+                laundry services, operational efficiency, and repeat customer satisfaction.</p>
 
-            <p class="table-closing-line slide-up">Build your business with a proven system instead of starting from
-                scratch.</p>
-            <div class="btn-container slide-up" style="padding-bottom: 0; margin-top: 0;">
-                <button class="btn franchise-btn">Start Your Franchise Journey</button>
+            <div class="process-layout slide-up">
+
+                <!-- left: Steps -->
+                <div class="process-steps">
+
+                    <div class="process-card">
+                        <div class="process-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <div class="process-info">
+                            <span class="process-step">Step 1</span>
+                            <h3>Customer Booking</h3>
+                            <p>Customers place laundry or dry cleaning service requests through available booking and
+                                communication channels.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-icon"><i class="fa-solid fa-truck-pickup"></i></div>
+                        <div class="process-info">
+                            <span class="process-step">Step 2</span>
+                            <h3>Pickup &amp; Collection</h3>
+                            <p>Garments are collected from customer locations through organized pickup operations.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-icon"><i class="fa-solid fa-shirt"></i></div>
+                        <div class="process-info">
+                            <span class="process-step">Step 3</span>
+                            <h3>Professional Garment Care</h3>
+                            <p>Laundry, dry cleaning, ironing, and fabric care services are handled using standardized
+                                operational processes.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <div class="process-info">
+                            <span class="process-step">Step 4</span>
+                            <h3>Quality Check &amp; Packaging</h3>
+                            <p>Garments go through quality inspection before secure packaging and dispatch.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="process-info">
+                            <span class="process-step">Step 5</span>
+                            <h3>Timely Delivery</h3>
+                            <p>Processed garments are delivered back to customers with a smooth and reliable service
+                                experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-card process-card-last">
+                        <div class="process-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        <div class="process-info">
+                            <span class="process-step">Step 6</span>
+                            <h3>Repeat Customer Cycle</h3>
+                            <p>Satisfied customers continue using the service regularly, helping build recurring monthly
+                                business.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- right: Image -->
+                <div class="process-image">
+                    <img src=""
+                        alt="Cleand laundry franchise operational process" loading="lazy">
+                </div>
+
             </div>
         </div>
     </section>
 
+    <section class="franchise-support">
+        <div class="section-container slide-up">
+            <h2 class="section-title">Complete Franchise Support from <span style="color: #de8d1f;">Cleand</span></h2>
+            <p class="section-subtitle">Cleand provides end-to-end franchise support to help partners launch, manage,
+                and grow a successful laundry &amp; dry cleaning business in India.</p>
 
-    <section class="why-section">
+            <div class="support-columns slide-up">
+
+                <!-- LEFT: Pre-Launch -->
+                <div class="support-col">
+                    <div class="support-col-header">
+                        <span class="support-step">Phase 1</span>
+                        <h3>Pre-Launch Support</h3>
+                    </div>
+
+                    <div class="support-item">
+                        <div class="support-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="support-info">
+                            <h4>Location Assistance</h4>
+                            <p>Guidance in selecting suitable business locations based on target customers, demand, and
+                                operational feasibility.</p>
+                        </div>
+                    </div>
+
+                    <div class="support-item">
+                        <div class="support-icon"><i class="fa-solid fa-store"></i></div>
+                        <div class="support-info">
+                            <h4>Store Planning &amp; Branding</h4>
+                            <p>Support for store layout planning, workflow setup, branding, and business identity
+                                development.</p>
+                        </div>
+                    </div>
+
+                    <div class="support-item">
+                        <div class="support-icon"><i class="fa-solid fa-gears"></i></div>
+                        <div class="support-info">
+                            <h4>Equipment Consultation</h4>
+                            <p>Assistance in selecting the right laundry equipment and setup requirements for smooth
+                                operations.</p>
+                        </div>
+                    </div>
+
+                    <div class="support-item">
+                        <div class="support-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <div class="support-info">
+                            <h4>Staff Training &amp; Software Setup</h4>
+                            <p>Training for laundry operations, customer handling, and guidance for order management
+                                systems and software setup.</p>
+                        </div>
+                    </div>
+
+                    <div class="support-item">
+                        <div class="support-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                        <div class="support-info">
+                            <h4>Launch Marketing Support</h4>
+                            <p>Support for promotional campaigns and customer acquisition activities during the business
+                                launch phase.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Post-Launch -->
+                <div class="support-col">
+                    <div class="support-col-header">
+                        <span class="support-step">Phase 2</span>
+                        <h3>Post-Launch &amp; Growth Support</h3>
+                    </div>
+
+                    <div class="support-item">
+                        <div class="support-icon"><i class="fa-solid fa-list-check"></i></div>
+                        <div class="support-info">
+                            <h4>Operational Support</h4>
+                            <p>Continuous guidance for daily operations, process standardization, and service quality
+                                management.</p>
+                        </div>
+                    </div>
+
+                    <div class="support-item">
+                        <div class="support-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="support-info">
+                            <h4>Digital Marketing Assistance</h4>
+                            <p>Support for local digital marketing, online visibility, and business promotion.</p>
+                        </div>
+                    </div>
+
+                    <div class="support-item">
+                        <div class="support-icon"><i class="fa-solid fa-heart"></i></div>
+                        <div class="support-info">
+                            <h4>Customer Retention Support</h4>
+                            <p>Guidance to improve customer experience, repeat orders, and long-term customer retention.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="support-item">
+                        <div class="support-icon"><i class="fa-solid fa-users"></i></div>
+                        <div class="support-info">
+                            <h4>Lead Generation Strategies</h4>
+                            <p>Support with local customer acquisition and sustainable business growth initiatives.</p>
+                        </div>
+                    </div>
+
+                    <div class="support-item">
+                        <div class="support-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                        <div class="support-info">
+                            <h4>Business Expansion Guidance</h4>
+                            <p>Operational and strategic support for scaling and expanding the laundry franchise
+                                business.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="why-section">
         <div class="section-container slide-up">
             <h2 class="section-title">Why Invest in the Laundry Industry?</h2>
             <ul class="power-line">
@@ -1610,8 +715,141 @@
 
             <div class="why-end-line slide-up">“Your City Could Be the Next Cleand Location.”</div>
         </div>
+    </section> -->
+
+    <section class="franchise-difference">
+        <div class="section-container slide-up">
+            <h2 class="section-title">What Makes <span style="color: #de8d1f;">Cleand</span> Different</h2>
+            <p class="section-subtitle">Cleand focuses on building a modern and customer-focused laundry business model
+                designed for long-term growth.</p>
+
+            <div class="difference-layout slide-up">
+
+                <!-- LEFT: Content -->
+                <div class="difference-grid">
+
+                    <div class="difference-card">
+                        <!-- <div class="difference-icon"><i class="fa-solid fa-palette"></i></div> -->
+                        <h3>Modern Branding</h3>
+                        <p>A professional and clean brand presentation helps improve customer trust and market
+                            positioning.</p>
+                    </div>
+
+                    <div class="difference-card">
+                        <!-- <div class="difference-icon"><i class="fa-solid fa-diagram-project"></i></div> -->
+                        <h3>Streamlined Operations</h3>
+                        <p>Operational systems are designed to improve efficiency and service consistency.</p>
+                    </div>
+
+                    <div class="difference-card">
+                        <!-- <div class="difference-icon"><i class="fa-solid fa-face-smile"></i></div> -->
+                        <h3>Customer Experience Focus</h3>
+                        <p>We prioritize service quality, convenience, and customer satisfaction.</p>
+                    </div>
+
+                    <div class="difference-card">
+                        <!-- <div class="difference-icon"><i class="fa-solid fa-laptop-code"></i></div> -->
+                        <h3>Technology Integration</h3>
+                        <p>Operational support and process management help simplify business handling.</p>
+                    </div>
+
+                    <div class="difference-card">
+                        <!-- <div class="difference-icon"><i class="fa-solid fa-bullhorn"></i></div> -->
+                        <h3>Local Marketing Support</h3>
+                        <p>Cleand supports franchise partners with strategies for local customer growth.</p>
+                    </div>
+
+                    <div class="difference-card">
+                        <!-- <div class="difference-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div> -->
+                        <h3>Scalable Systems</h3>
+                        <p>Business processes are structured for long-term operational expansion.</p>
+                    </div>
+
+                    <div class="difference-card difference-card-wide">
+                        <!-- <div class="difference-icon"><i class="fa-solid fa-award"></i></div> -->
+                        <div class="difference-wide-text">
+                            <h3>Standardized Quality</h3>
+                            <p>Focus on maintaining service consistency across operations.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT: Image -->
+                <div class="difference-image">
+                    <img src=""
+                        alt="What makes Cleand laundry franchise different" loading="lazy">
+                </div>
+
+            </div>
+        </div>
     </section>
 
+    <section class="franchise-onboarding">
+        <div class="section-container slide-up">
+            <h2 class="section-title"><span style="color: #de8d1f;">Cleand</span> Franchise Onboarding Process</h2>
+
+            <div class="onboarding-steps slide-up">
+
+                <div class="onboarding-step">
+                    <div class="onboarding-icon"><i class="fa-solid fa-file-lines"></i></div>
+                    <div class="onboarding-info">
+                        <span class="onboarding-label">Step 1</span>
+                        <h3>Business Inquiry</h3>
+                        <p>Connect with the Cleand team and share your franchise business interests.</p>
+                    </div>
+                </div>
+
+                <div class="onboarding-step">
+                    <div class="onboarding-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="onboarding-info">
+                        <span class="onboarding-label">Step 2</span>
+                        <h3>Consultation &amp; Planning</h3>
+                        <p>Discuss business models, investment requirements, operational structure, and growth
+                            opportunities.</p>
+                    </div>
+                </div>
+
+                <div class="onboarding-step">
+                    <div class="onboarding-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="onboarding-info">
+                        <span class="onboarding-label">Step 3</span>
+                        <h3>Location Finalization</h3>
+                        <p>Evaluate suitable business locations and setup possibilities based on market potential.</p>
+                    </div>
+                </div>
+
+                <div class="onboarding-step">
+                    <div class="onboarding-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <div class="onboarding-info">
+                        <span class="onboarding-label">Step 4</span>
+                        <h3>Franchise Agreement</h3>
+                        <p>Finalize the partnership and begin franchise onboarding procedures.</p>
+                    </div>
+                </div>
+
+                <div class="onboarding-step">
+                    <div class="onboarding-icon"><i class="fa-solid fa-store"></i></div>
+                    <div class="onboarding-info">
+                        <span class="onboarding-label">Step 5</span>
+                        <h3>Store Setup &amp; Training</h3>
+                        <p>Complete store branding, operational setup, software integration, and staff training.</p>
+                    </div>
+                </div>
+
+                <div class="onboarding-step">
+                    <div class="onboarding-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <div class="onboarding-info">
+                        <span class="onboarding-label">Step 6</span>
+                        <h3>Launch</h3>
+                        <p>Launch your Cleand laundry &amp; dry cleaning franchise business with operational and
+                            marketing support.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <section class="franchise-models" style="background: #faf6ef;">
         <div class="section-container">
@@ -1797,8 +1035,8 @@
         <div class="section-container slide-up">
             <div class="testimonial-container">
                 <h2 class="section-title">What Our Partners Say</h2>
-                <p class="testimonial-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla
-                    asperiores magni necessitatibus iusto eum odio quos possimus nesciunt fuga velit.</p>
+                <p class="testimonial-description">Our franchise partners share their experiences of starting, managing,
+                    and growing their laundry businesses with Cleand’s complete franchise support system.</p>
 
                 <button class="nav-btn prev" id="prevBtn">&#10094;</button>
                 <button class="nav-btn next" id="nextBtn">&#10095;</button>
@@ -1806,20 +1044,17 @@
                 <div class="slider-viewport slide-up">
                     <div class="testimonial-track" id="track">
                         <div class="testimonial-card">
-                            <p class="description">"Cleand has changed my weekly chores. My white shirts have never
-                                looked
-                                brighter! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur nobis
-                                magni sit doloremque voluptates vel perferendis architecto nemo quos iure."</p>
+                            <p class="description">"Starting a laundry business with Cleand helped us organize
+                                operations professionally and improve customer trust."</p>
                             <div class="user-info">
                                 <h4 class="name">Arjun Sharma</h4>
-                                <span class="position">Partner, Delhi</span>
+                                <span class="position">Partner, Assam</span>
                             </div>
                         </div>
 
                         <div class="testimonial-card">
-                            <p class="description">"The attention to detail on my silk sarees was impressive. No harsh
-                                chemical smells. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur
-                                nobis magni sit doloremque voluptates vel perferendis architecto nemo quos iure."</p>
+                            <p class="description">"The operational guidance and marketing support made the setup
+                                process much smoother."</p>
                             <div class="user-info">
                                 <h4 class="name">Priya Patel</h4>
                                 <span class="position">Partner, Pune</span>
@@ -1827,10 +1062,8 @@
                         </div>
 
                         <div class="testimonial-card">
-                            <p class="description">"Efficient and reliable. I love the tracking system. It respects
-                                pickup
-                                timings. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur nobis
-                                magni sit doloremque voluptates vel perferendis architecto nemo quos iure."</p>
+                            <p class="description">"We were able to build a steady customer base through pickup and
+                                delivery services."</p>
                             <div class="user-info">
                                 <h4 class="name">Rahul Verma</h4>
                                 <span class="position">Partner, Mumbai</span>
@@ -1838,14 +1071,27 @@
                         </div>
 
                         <div class="testimonial-card">
-                            <p class="description">"Sneaker Spa is a game changer. My old running shoes look brand new
-                                again. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur nobis magni
-                                sit doloremque voluptates vel perferendis architecto nemo quos iure."</p>
+                            <p class="description">
+                                "Cleand's support helped us manage our laundry business
+                                with greater confidence and consistency."
+                            </p>
                             <div class="user-info">
-                                <h4 class="name">Anjali Singh</h4>
+                                <h4 class="name">Amit Kumar</h4>
                                 <span class="position">Partner, Jaipur</span>
                             </div>
                         </div>
+
+                        <div class="testimonial-card">
+                            <p class="description">
+                                "The training and operational guidance helped us
+                                understand the business processes more clearly."
+                            </p>
+                            <div class="user-info">
+                                <h4 class="name">Neha Singh</h4>
+                                <span class="position">Partner, Delhi</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -2208,33 +1454,63 @@
 
     <!-- for testimonial -->
     <script>
-        const track = document.getElementById("track");
-        const cards = document.querySelectorAll(".testimonial-card");
-        const nextBtn = document.getElementById("nextBtn");
-        const prevBtn = document.getElementById("prevBtn");
+        document.addEventListener("DOMContentLoaded", function () {
+            const track = document.getElementById("track");
+            const cards = document.querySelectorAll(
+                ".franchise-testimonials .testimonial-card"
+            );
+            const nextBtn = document.getElementById("nextBtn");
+            const prevBtn = document.getElementById("prevBtn");
+            const viewport = document.querySelector(
+                ".franchise-testimonials .slider-viewport"
+            );
 
-        let index = 0;
-        const totalSlides = cards.length;
+            let index = 0;
 
-        function updateSlider() {
-            track.style.transform = `translateX(-${index * 100}%)`;
-        }
-
-        nextBtn.addEventListener("click", () => {
-            if (index < totalSlides - 1) {
-                index++;
-            } else {
-                index = 0; // loop to first
+            function getVisibleCards() {
+                if (window.innerWidth <= 600) return 1;
+                if (window.innerWidth <= 991) return 2;
+                return 3;
             }
-            updateSlider();
-        });
 
-        prevBtn.addEventListener("click", () => {
-            if (index > 0) {
-                index--;
-            } else {
-                index = totalSlides - 1; // loop to last
+            function getMaxIndex() {
+                return Math.max(0, cards.length - getVisibleCards());
             }
+
+            function updateSlider() {
+                const cardWidth = cards[0].getBoundingClientRect().width;
+                const trackStyle = window.getComputedStyle(track);
+                const gap = parseFloat(trackStyle.columnGap) || 0;
+
+                track.style.transform =
+                    `translateX(-${index * (cardWidth + gap)}px)`;
+            }
+
+            nextBtn.addEventListener("click", function () {
+                if (index < getMaxIndex()) {
+                    index++;
+                } else {
+                    index = 0;
+                }
+
+                updateSlider();
+            });
+
+            prevBtn.addEventListener("click", function () {
+                if (index > 0) {
+                    index--;
+                } else {
+                    index = getMaxIndex();
+                }
+
+                updateSlider();
+            });
+
+            window.addEventListener("resize", function () {
+                index = Math.min(index, getMaxIndex());
+                updateSlider();
+            });
+
             updateSlider();
         });
     </script>
