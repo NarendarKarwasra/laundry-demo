@@ -331,159 +331,73 @@
 
 
 
-.investment-stats {
+
+
+
+/* Why Laundry & Dry Cleaning Business is a Growing Opportunity */
+.growth-opportunity {
     padding: 30px 0 40px;
 }
 
-.section-subtitle {
-    text-align: center;
-    color: #777;
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 10px;
-    font-size: 17px;
-    line-height: 1.4;
-}
-
-.investment-stats .stats-grid {
+.growth-opportunity .growth-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 30px;
 }
 
-.investment-stats .stat-card {
-    background: #fff;
-    padding: 20px 10px;
+.growth-opportunity .growth-image img {
+    width: 100%;
+    height: auto;
+    display: block;
     border-radius: 6px;
-    text-align: center;
+    background: #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
     border-bottom: 5px solid #e9e2d7;
 }
 
-.investment-stats .stat-card:hover {
-    transform: translateY(-6px);
+.growth-opportunity .growth-text p {
+    color: #777;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 14px;
 }
 
-.investment-stats .icon-box {
-    font-size: 2.4rem;
-    margin-bottom: 10px;
-    color: #de8d1f;
+.growth-opportunity .growth-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0;
 }
 
-.investment-stats .stat-card h3 {
-    font-size: 1.3rem;
-    margin: 10px 0 6px;
-}
-
-.investment-stats .stat-card p {
-    font-size: 18px;
-}
-
-.investment-stats .stat-card-desc {
-    line-height: 1.3;
-    margin: 10px 0;
-    opacity: 0.8;
-}
-
-.investment-stats .badge {
+.growth-opportunity .growth-tags .badge {
     display: inline-block;
     padding: 5px 15px;
     background: #f5f1ec;
     color: #b06907;
     border-radius: 50px;
     font-size: 0.9rem;
-    margin-top: 15px;
+    margin-top: 0;
 }
 
-
-@media (max-width: 992px) {
-    .investment-stats .stats-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 500px) {
-    .investment-stats .stats-grid {
-        grid-template-columns: 1fr;
-    }
-}
-.table-closing-line {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
+.growth-opportunity .growth-text .growth-highlight {
+    border-left: 4px solid #de8d1f;
+    padding-left: 14px;
+    color: #333;
     font-weight: 500;
-    color: #de8d1f;
-}
-
-
-
-
-
-
-
-
-.investment-stats .advantages-block {
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px 30px 24px;
-    margin: 40px 0 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-bottom: 5px solid #e9e2d7;
-}
-
-.investment-stats .advantages-title {
-    text-align: center;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-}
-
-.investment-stats .advantages-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 14px;
-}
-
-.investment-stats .advantage-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    background: #f5f1ec;
-    padding: 12px 16px;
-    border-radius: 6px;
-    line-height: 1.35;
-    font-size: 16px;
-    min-height: 60px;
-}
-
-.investment-stats .advantage-item i {
-    color: #de8d1f;
-    font-size: 1.2rem;
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-.investment-stats .investment-note {
-    text-align: center;
-    color: #777;
-    font-size: 14px;
-    font-style: italic;
-    margin: 20px 0 0px;
+    margin-bottom: 0;
 }
 
 @media (max-width: 992px) {
-    .investment-stats .advantages-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 500px) {
-    .investment-stats .advantages-block {
-        padding: 20px 15px;
-    }
-
-    .investment-stats .advantages-grid {
+    .growth-opportunity .growth-content {
         grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .growth-opportunity .growth-image img {
+        max-width: 500px;
+        margin: auto;
     }
 }
 
@@ -492,6 +406,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Why Choose Cleand Franchise Business? */
 .partners-section {
     padding: 30px 0 50px;
 }
@@ -605,7 +534,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
 /* Video Section Styles */
+/* Own a Cleand - The Laundry Spa Franchise */
 .video-presentation {
     position: relative;
     overflow: hidden;
@@ -683,294 +622,157 @@
 
 
 
-/* Support Section Styles */
 
-/* .support-section {
+
+
+
+
+/* Investment & Business Potential */
+.investment-stats {
     padding: 30px 0 40px;
 }
 
-.support-des {
+.section-subtitle {
     text-align: center;
-    width: 80%;
+    color: #777;
+    max-width: 1000px;
     margin: auto;
-    margin-top: 6px;
+    margin-top: 10px;
     font-size: 17px;
-    line-height: 1.3;
-    color: #656565;
+    line-height: 1.4;
 }
 
-.support-flex {
-    display: flex;
-    flex-wrap: wrap;
+.investment-stats .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
-    justify-content: center;
-    margin-top: 40px;
 }
 
-.support-item {
-    flex: 1;
-    min-width: 250px;
-    background: #f4e6d1;
-    padding: 26px;
+.investment-stats .stat-card {
+    background: #fff;
+    padding: 20px 10px;
     border-radius: 6px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.2s ease-in-out;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-bottom: 5px solid #e9e2d7;
 }
 
-.support-item:hover {
+.investment-stats .stat-card:hover {
     transform: translateY(-6px);
 }
 
-.step-num {
-    position: absolute;
-    bottom: -10px;
-    right: 10px;
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #de8d1f;
-    opacity: 0.2;
-}
-
-.support-item h4 {
-    color: #de8d1f;
-    font-size: 1.3rem;
+.investment-stats .icon-box {
+    font-size: 2.4rem;
     margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-    .support-section .section-title {
-        font-size: 2rem;
-    }
-
-    .support-des {
-        width: 100%;
-    }
-} */
-
-
-
-
-.franchise-process {
-    padding: 30px 0 40px;
-}
-
-.franchise-process .process-layout {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
-    margin-top: 30px;
-    align-items: start;
-}
-
-/* Left image */
-.franchise-process .process-image {
-    position: sticky;
-    top: 100px;
-}
-
-.franchise-process .process-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-bottom: 5px solid #e9e2d7;
-}
-
-/* Right steps */
-.franchise-process .process-steps {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-/* Vertical connecting line */
-.franchise-process .process-steps::before {
-    content: "";
-    position: absolute;
-    left: 45px;
-    top: 30px;
-    bottom: 30px;
-    width: 2px;
-    background: repeating-linear-gradient(
-        to bottom,
-        #de8d1f 0,
-        #de8d1f 6px,
-        transparent 6px,
-        transparent 12px
-    );
-    z-index: 0;
-}
-
-.franchise-process .process-card {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-    background: #fff;
-    padding: 18px 20px;
-    border-radius: 6px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-bottom: 5px solid #e9e2d7;
-    transition: transform 0.3s ease;
-}
-
-.franchise-process .process-card:hover {
-    transform: translateX(6px);
-}
-
-.franchise-process .process-icon {
-    flex-shrink: 0;
-    width: 52px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f5f1ec;
     color: #de8d1f;
-    border-radius: 50%;
+}
+
+.investment-stats .stat-card h3 {
     font-size: 1.3rem;
-    transition: background 0.3s ease, color 0.3s ease;
+    margin: 10px 0 6px;
 }
 
-.franchise-process .process-card:hover .process-icon {
-    background: #de8d1f;
-    color: #fff;
+.investment-stats .stat-card p {
+    font-size: 18px;
 }
 
-.franchise-process .process-step {
+.investment-stats .stat-card-desc {
+    line-height: 1.3;
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.investment-stats .badge {
     display: inline-block;
-    padding: 2px 12px;
+    padding: 5px 15px;
     background: #f5f1ec;
     color: #b06907;
     border-radius: 50px;
-    font-size: 0.8rem;
-    margin-bottom: 6px;
+    font-size: 0.9rem;
+    margin-top: 15px;
 }
 
-.franchise-process .process-info h3 {
-    font-size: 1.15rem;
-    margin: 0 0 5px;
-}
-
-.franchise-process .process-info p {
-    font-size: 15px;
-    line-height: 1.4;
-    color: #777;
-    margin: 0;
-}
-
-/* Highlight final "cycle" step */
-.franchise-process .process-card-last {
-    border-bottom-color: #de8d1f;
-}
-
-.franchise-process .process-card-last .process-icon {
-    background: #de8d1f;
-    color: #fff;
-}
-
-.franchise-process .process-card-last .process-step {
-    background: #de8d1f;
-    color: #fff;
-}
 
 @media (max-width: 992px) {
-    .franchise-process .process-layout {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .franchise-process .process-layout .process-steps {
-        order: 2;
-    }
-
-    .franchise-process .process-image {
-        position: static;
-        order: 1;
-        max-width: 500px;
-        margin: auto;
+    .investment-stats .stats-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 500px) {
-    .franchise-process .process-card {
-        padding: 15px;
-        gap: 14px;
-    }
-
-    .franchise-process .process-icon {
-        width: 44px;
-        height: 44px;
-        font-size: 1.1rem;
-    }
-
-    .franchise-process .process-steps::before {
-        left: 37px;
+    .investment-stats .stats-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 
+/* Key Business Advantages */
 
-
-
-
-
-
-
-/* .comparison-section {
-    padding: 30px 0 40px;
-}
-
-.table-heading {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #de8d1f;
-}
-
-.comp-table {
-    width: 100%;
-    border-collapse: collapse;
+.investment-stats .advantages-block {
     background: #fff;
     border-radius: 6px;
-    overflow: hidden;
+    padding: 10px 30px 24px;
+    margin: 40px 0 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-top: 14px;
+    border-bottom: 5px solid #e9e2d7;
 }
 
-.comp-table th,
-.comp-table td {
-    padding: 20px;
-    text-align: left;
-    border-bottom: 1px solid #eee;
+.investment-stats .advantages-title {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
 }
 
-.comp-table th {
-    background: #de8d1f;
-    color: #fff;
+.investment-stats .advantages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
 }
 
-.comp-table td.check {
-    color: #28a745;
-    font-weight: bold;
+.investment-stats .advantage-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #f5f1ec;
+    padding: 12px 16px;
+    border-radius: 6px;
+    line-height: 1.35;
+    font-size: 16px;
+    min-height: 60px;
 }
 
-.comp-table td.cross {
-    color: #dc3545;
+.investment-stats .advantage-item i {
+    color: #de8d1f;
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
 }
 
-.comp-table tbody tr {
-    transition: all 0.2s ease-in-out;
+.investment-stats .investment-note {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    font-style: italic;
+    margin: 20px 0 0px;
 }
 
-.comp-table tbody tr:hover {
-    background-color: #fff0dd;
+@media (max-width: 992px) {
+    .investment-stats .advantages-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
+
+@media (max-width: 500px) {
+    .investment-stats .advantages-block {
+        padding: 20px 15px;
+    }
+
+    .investment-stats .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .table-closing-line {
     text-align: center;
@@ -980,23 +782,25 @@
     color: #de8d1f;
 }
 
-@media (max-width: 500px) {
-
-    .comp-table th,
-    .comp-table td {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 350px) {
-
-    .comp-table th,
-    .comp-table td {
-        padding: 4px;
-    }
-} */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Complete Franchise Support from Cleand */
 .franchise-support {
     padding: 30px 0 40px;
 }
@@ -1105,72 +909,193 @@
 
 
 
-/* 
 
-.why-section {
+
+
+
+
+
+
+
+
+/* How the Cleand Laundry Franchise Works */
+.franchise-process {
     padding: 30px 0 40px;
 }
 
-.why-container {
-    margin-top: 40px;
+.franchise-process .process-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+    align-items: start;
 }
 
-.why-card {
-    padding: 20px;
-    border: 1px solid #dedede;
-    box-shadow: 0px 0px 30px 1px #e8e8e8;
-    text-align: center;
-    transition: all 0.2s ease-in-out;
+/* Left image */
+.franchise-process .process-image {
+    position: sticky;
+    top: 100px;
 }
 
-.why-card:hover {
-    background: #fff6e9;
-    box-shadow: none;
+.franchise-process .process-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #e9e2d7;
 }
 
-.why-card i {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #000;
-    margin-top: 10px;
+/* Right steps */
+.franchise-process .process-steps {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Vertical connecting line */
+.franchise-process .process-steps::before {
+    content: "";
+    position: absolute;
+    left: 45px;
+    top: 30px;
+    bottom: 30px;
+    width: 2px;
+    background: repeating-linear-gradient(to bottom,
+            #de8d1f 0,
+            #de8d1f 6px,
+            transparent 6px,
+            transparent 12px);
+    z-index: 0;
+}
+
+.franchise-process .process-card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #e9e2d7;
+    transition: transform 0.3s ease;
+}
+
+.franchise-process .process-card:hover {
+    transform: translateX(6px);
+}
+
+.franchise-process .process-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f1ec;
     color: #de8d1f;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-.why-card p {
-    margin: auto;
-    line-height: 1.3;
-    margin-top: 10px;
+.franchise-process .process-card:hover .process-icon {
+    background: #de8d1f;
+    color: #fff;
 }
 
-.why-end-line {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #de8d1f;
+.franchise-process .process-step {
+    display: inline-block;
+    padding: 2px 12px;
+    background: #f5f1ec;
+    color: #b06907;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
 }
 
-
-
-
-@media (max-width: 768px) {
-    .why-container {
-        grid-template-columns: 1fr 1fr;
-    }
+.franchise-process .process-info h3 {
+    font-size: 1.15rem;
+    margin: 0 0 5px;
 }
 
-@media (max-width: 450px) {
-    .why-container {
+.franchise-process .process-info p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #777;
+    margin: 0;
+}
+
+/* Highlight final "cycle" step */
+.franchise-process .process-card-last {
+    border-bottom-color: #de8d1f;
+}
+
+.franchise-process .process-card-last .process-icon {
+    background: #de8d1f;
+    color: #fff;
+}
+
+.franchise-process .process-card-last .process-step {
+    background: #de8d1f;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .franchise-process .process-layout {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
-} */
+
+    .franchise-process .process-layout .process-steps {
+        order: 2;
+    }
+
+    .franchise-process .process-image {
+        position: static;
+        order: 1;
+        max-width: 500px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .franchise-process .process-card {
+        padding: 15px;
+        gap: 14px;
+    }
+
+    .franchise-process .process-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+
+    .franchise-process .process-steps::before {
+        left: 37px;
+    }
+}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* What Makes Cleand Different */
 
 .franchise-difference {
     padding: 30px 0 40px;
@@ -1178,7 +1103,7 @@
 
 .franchise-difference .difference-layout {
     display: grid;
-    grid-template-columns: 7fr 5fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: 40px;
     margin-top: 30px;
     align-items: start;
@@ -1272,7 +1197,8 @@
 
     .franchise-difference .difference-image {
         position: static;
-        order: -1; /* image on top for tablet/mobile */
+        order: -1;
+        /* image on top for tablet/mobile */
         max-width: 500px;
         margin: auto;
     }
@@ -1296,6 +1222,7 @@
 
 
 
+/* Cleand Franchise Onboarding Process */
 .franchise-onboarding {
     padding: 30px 0 40px;
 }
@@ -1317,8 +1244,10 @@
 .franchise-onboarding .onboarding-step:not(:last-child)::before {
     content: "";
     position: absolute;
-    top: 33px;                      /* half of icon height */
-    left: calc(50% + 43px);         /* icon radius + gap */
+    top: 33px;
+    /* half of icon height */
+    left: calc(50% + 43px);
+    /* icon radius + gap */
     width: calc(100% - 86px);
     height: 2px;
     background: #de8d1f;
@@ -1429,8 +1358,8 @@
 
 
 
-
-
+/* pricing model */
+/* Start Your Entrepreneurial Journey with Cleand */
 .franchise-models {
     padding: 30px 0 60px;
 }
@@ -1619,6 +1548,12 @@
 
 
 
+
+
+
+
+
+/* blog section */
 .blog-section {
     padding: 30px 0 40px;
 }
@@ -1723,24 +1658,15 @@
 
 
 
-/* .franchise-testimonials .slider-viewport {
-    margin-left: 0px;
-}
-
-.franchise-testimonials .testimonial-card {
-    min-width: 100%;
-    border-radius: 12px;
-}
-
-.franchise-testimonials .testimonial-track {
-    display: flex;
-    gap: 0;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-} */
 
 
 
 
+
+
+
+
+/* testimonial section */
 
 .franchise-testimonials .slider-viewport {
     margin-left: 0;
@@ -1803,90 +1729,4 @@
 .blog-more-btn {
     margin-top: 20px;
     padding: 10px 30px !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.growth-opportunity {
-    padding: 30px 0 40px;
-}
-
-.growth-opportunity .growth-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.growth-opportunity .growth-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-    background: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-bottom: 5px solid #e9e2d7;
-}
-
-.growth-opportunity .growth-text p {
-    color: #777;
-    font-size: 17px;
-    line-height: 1.5;
-    margin-bottom: 14px;
-}
-
-.growth-opportunity .growth-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 18px 0;
-}
-
-.growth-opportunity .growth-tags .badge {
-    display: inline-block;
-    padding: 5px 15px;
-    background: #f5f1ec;
-    color: #b06907;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    margin-top: 0;
-}
-
-.growth-opportunity .growth-text .growth-highlight {
-    border-left: 4px solid #de8d1f;
-    padding-left: 14px;
-    color: #333;
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
-@media (max-width: 992px) {
-    .growth-opportunity .growth-content {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    .growth-opportunity .growth-image img {
-        max-width: 500px;
-            margin: auto;
-    }
 }
