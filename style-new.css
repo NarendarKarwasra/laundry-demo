@@ -296,6 +296,16 @@
 }
 
 /* ---------- Tablet ---------- */
+@media (max-width: 1180px) {
+    .hero-new-content {
+        width: 60%;
+    }
+    .hero-new-carousel {
+        padding-top: 60px;
+    }
+}
+
+
 @media (max-width: 1050px) {
     .hero-new-carousel {
         height: 600px;
@@ -335,46 +345,52 @@
 @media (max-width: 768px) {
     .hero-new-carousel {
         height: auto;
-        min-height: 520px;
+        height: 500px;
+        padding-top: 60px;
     }
-
+    
     .hero-new-carousel-track {
         height: auto;
     }
-
+    
     .hero-new-slide {
         height: auto;
         min-height: 520px;
         padding-bottom: 40px;
     }
-
+    
     .hero-new-content {
         padding-bottom: 40px;
     }
-
+    
     .hero-new-content h1 br {
         display: none;
     }
 
+    .hero-new-content h1 {
+        font-size: 2rem;
+    }
+    
     .hero-new-content p {
         font-size: 16px;
     }
-
+    
     .hero-new-btn-container {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .hero-new-btn {
         width: 100%;
-        max-width: 280px;
+        max-width: 300px;
+        min-height: 50px;
         justify-content: center;
     }
-
+    
     .hero-new-progress {
-        bottom: 14px;
+        display: none;
     }
-
+    
     .hero-new-fixed {
         position: static;
         transform: none;
@@ -383,23 +399,72 @@
         box-shadow: none;
         grid-template-columns: 1fr;
     }
-
+    
     .hero-new-fixed-card {
         justify-content: flex-start;
         padding: 14px 24px;
+                border-bottom: 1px solid var(--secondry-color);
     }
-
+    
     .hero-new-fixed-card+.hero-new-fixed-card {
         border-left: 0;
-        border-top: 1px solid var(--secondry-color);
     }
+}
+
+@media (max-width: 768px) {
+    .hero-new-carousel {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-new-carousel {
+        height: fit-content;
+    }
+    
+    .hero-new-slide {
+        min-height: fit-content;
+    }
+    .hero-new-content {
+        padding-bottom: 0px;
+        padding-top: 40px;
+    }
+    
+    
+    @media (max-width: 320px) {
+        
+        .hero-new-btn-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .hero-new-btn {
+            width: 100%;
+            max-width: 300px;
+            min-height: 46px;
+            font-size: 16px;
+            padding: 6px 10px;
+        }
+
+        .hero-new-btn img {
+            width: 24px;
+            height: auto;
+        }
+
+        .hero-new-pickup-btn img {
+            width: 36px;
+        }
+
+    }
+
+    
 }
 
 @media (prefers-reduced-motion: reduce) {
     .hero-new-carousel-track {
         transition: none;
     }
-
+    
     .hero-new-progress button.hero-new-active span::after {
         animation: none;
         transform: scaleX(1);
@@ -667,9 +732,6 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1050px) {
-    .services-new {
-        padding: 64px 0 70px;
-    }
 
     .services-new-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -677,10 +739,6 @@
 }
 
 @media (max-width: 570px) {
-    .services-new {
-        padding: 48px 0 56px;
-    }
-
     .services-new-header {
         margin-bottom: 36px;
     }
@@ -999,9 +1057,6 @@
 }
 
 @media (max-width: 960px) {
-    .care-new {
-        padding: 64px 0;
-    }
 
     .care-new-layout {
         grid-template-columns: 1fr;
@@ -1018,7 +1073,7 @@
     }
 
     .care-new-arch {
-        max-width: 360px;
+        max-width: 460px;
         margin-inline: auto;
     }
 
@@ -1036,14 +1091,11 @@
 }
 
 @media (max-width: 570px) {
-    .care-new {
-        padding: 48px 0;
-    }
-
+    
     .care-new-grid {
         grid-template-columns: 1fr;
     }
-
+    
     .care-new-actions {
         flex-direction: column;
         align-items: center;
@@ -1052,7 +1104,18 @@
     .care-new-btn {
         width: 100%;
         max-width: 290px;
+        height: 46px;
         justify-content: center;
+    }
+}
+
+@media (max-width: 570px) {
+    .care-new-arch img {
+        height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: unset;
+        filter: none;
     }
 }
 
@@ -1322,9 +1385,6 @@
 
 /* ---------- Tablet: 2 x 2, no line ---------- */
 @media (max-width: 960px) {
-    .steps-new {
-        padding: 64px 0 70px;
-    }
 
     .steps-new-header {
         margin-bottom: 54px;
@@ -1343,9 +1403,6 @@
 
 /* ---------- Mobile: vertical timeline ---------- */
 @media (max-width: 560px) {
-    .steps-new {
-        padding: 48px 0 56px;
-    }
 
     .steps-new-track {
         grid-template-columns: 1fr;
@@ -1828,18 +1885,16 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 992px) {
-    .city-new {
-        padding: 64px 0;
-    }
 
     .city-new-bento {
         grid-template-columns: 1fr 1fr;
     }
 
     .city-new-mascot {
-        grid-column: 1 / span 2;
         grid-row: 1;
         min-height: 400px;
+        /* margin: auto; */
+        grid-column: 1 / span 2;
     }
 
     .city-new-story {
@@ -1871,9 +1926,6 @@
 }
 
 @media (max-width: 570px) {
-    .city-new {
-        padding: 48px 0;
-    }
 
     .city-new-header {
         margin-bottom: 32px;
@@ -2143,9 +2195,6 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-    .why-new {
-        padding: 64px 0 70px;
-    }
 
     .why-new-cta {
         flex-direction: column;
@@ -2165,9 +2214,6 @@
 }
 
 @media (max-width: 480px) {
-    .why-new {
-        padding: 48px 0 56px;
-    }
 
     .why-new-header {
         margin-bottom: 36px;
@@ -2470,9 +2516,6 @@
 }
 
 @media (max-width: 700px) {
-    .numbers-new {
-        padding: 60px 0;
-    }
 
     .numbers-new-grid {
         grid-template-columns: 1fr;
@@ -2750,9 +2793,6 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-    .reviews-new {
-        padding: 60px 0 70px;
-    }
 
     .reviews-new-card {
         flex-basis: 100%;
@@ -3139,9 +3179,6 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
-    .faq-new {
-        padding: 56px 0 64px;
-    }
 
     .faq-new-question {
         padding: 17px 16px;
