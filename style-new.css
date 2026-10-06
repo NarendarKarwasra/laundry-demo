@@ -3446,9 +3446,6 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-    .app-new {
-        padding: 90px 0 56px;
-    }
 
     .app-new-card {
         grid-template-columns: 1fr;
@@ -3481,9 +3478,33 @@
     }
 }
 
+@media (max-width: 600px) {
+    .app-new-copy h2 {
+        font-size: 1.6rem;
+    }
+
+    .app-new-copy h2 i {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+@media (max-width: 420px) {
+    .app-new-copy h2 {
+        gap: 0px 10px;
+        font-size: 1.4rem;
+    }
+
+    .app-new-copy h2 i {
+        width: 6px;
+        height: 6px;
+    }
+}
+
 @media (max-width: 480px) {
+
     .app-new {
-        padding: 80px 0 44px;
+        padding: 120px 0 44px;
     }
 
     .app-new-photo {
@@ -3492,6 +3513,21 @@
 
     .app-new-stores img {
         height: 50px;
+    }
+}
+
+@media (max-width: 340px) {
+
+    .app-new {
+        padding: 90px 0 44px;
+    }
+}
+
+
+@media (max-width: 300px) {
+
+    .app-new {
+        padding: 50px 0 44px;
     }
 }
 
