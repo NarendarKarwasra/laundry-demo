@@ -230,7 +230,6 @@ html {
 }
 
 .app-container .icon-box {
-    margin-right: 10px;
     display: flex;
     align-items: center;
 }
@@ -1519,11 +1518,11 @@ html {
 }
 
 .download-section-2 {
-    background-image: url('images/123.webp'); 
+    background-image: url('images/123.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+
     min-height: 450px;
     width: 100%;
     margin: auto;
@@ -1584,7 +1583,7 @@ html {
 }
 
 @media (max-width: 1000px) {
-     .download-section-2 {
+    .download-section-2 {
         min-height: 350px;
     }
 }
@@ -1599,6 +1598,7 @@ html {
         text-align: left;
         align-items: baseline;
     }
+
     .download-section-2 {
         background-position: left;
         min-height: 300px;
@@ -1607,7 +1607,7 @@ html {
 }
 
 @media (max-width: 600px) {
-    
+
     .content-wrapper {
         width: 90%;
         background: rgba(234, 234, 234, 0.8);
@@ -2148,4 +2148,3 @@ html {
         border: none;
     }
 }
-
