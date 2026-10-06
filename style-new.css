@@ -2793,14 +2793,20 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-
+    
     .reviews-new-card {
         flex-basis: 100%;
         padding: 28px 24px 24px;
     }
-
+    
     .reviews-new-text {
         font-size: 1.08rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-new-arrow-hide {
+        display: none;
     }
 }
 
