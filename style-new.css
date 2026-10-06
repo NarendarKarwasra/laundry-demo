@@ -3495,10 +3495,6 @@
         font-size: 1.4rem;
     }
 
-    .app-new-copy h2 i {
-        width: 6px;
-        height: 6px;
-    }
 }
 
 @media (max-width: 480px) {
