@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cleand - Our Services</title>
+    <meta name="description"
+        content="Professional dry cleaning, daily laundry, steam ironing and home fabric care with doorstep pickup and delivery across India.">
+
+    <link rel="icon" type="image/png" href="images/cleand-favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-new.css">
+    <link rel="stylesheet" href="responsive.css">
+
+
+</head>
+
+<body>
+
+    <!-- fixed buttons on screen -->
+    <div class="fixed-on-screen">
+        <!-- Call Button -->
+        <div class="button-container call-container" onclick="callPhone()">
+            <i class="fas fa-phone icon"></i>
+            <span class="label call-label">Call Us</span>
+        </div>
+        <!-- Email Button -->
+        <div class="button-container app-container" onclick="downloadApp()">
+            <div class="icon-box">
+                <i class="fab fa-google-play icon"></i>
+                <i class="fab fa-apple icon"></i>
+            </div>
+            <span class="label app-label">Download App</span>
+        </div>
+
+        <!-- Whatsapp Button -->
+        <div class="button-container whatsapp-container" onclick="sendWhatsapp()">
+            <i class="fab fa-whatsapp icon"></i>
+            <span class="label whatsapp-label">Whatsapp Us</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="section-container">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <img src="images/cleand-R-logo.png" alt="Logo">
+                </a>
+
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <nav class="navmenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="store.html">Our Stores</a></li>
+                        <li><a href="franchise.html">Get Franchise</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+    <main class="svc-page">
+
+        <!-- ===================== 1. PAGE BANNER ===================== -->
+        <section class="svc-banner">
+            <div class="section-container">
+                <p class="banner-title">Our Laundry &amp; Care Services</p>
+                <p class="banner-sub">Professional garment and home fabric care — expert cleaning, transparent pricing,
+                    and doorstep convenience.</p>
+                <nav class="svc-crumbs" aria-label="Breadcrumb">
+                    <a href="/">Home</a><span class="sep" aria-hidden="true">»</span>
+                    <a href="/services">Services</a><span class="sep" aria-hidden="true">»</span>
+                    <span id="crumb-current" aria-current="page">Dry Cleaning</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- ===================== 2. TAB SYSTEM ===================== -->
+        <section class="svc-tabs-section" id="services">
+            <div class="section-container svc-tabs">
+
+                <!-- Left: tabs -->
+                <div class="svc-tablist" role="tablist" aria-label="Our services" aria-orientation="vertical">
+                    <button class="svc-tab" role="tab" id="tab-dry-cleaning" aria-controls="panel-dry-cleaning"
+                        aria-selected="true" data-label="Dry Cleaning">
+                        <span class="tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 7c0-1.2 1.8-1.6 1.8-3.2a1.8 1.8 0 1 0-3.6 0" />
+                                <path d="M12 7 3 14a1.2 1.2 0 0 0 .8 2.1h16.4A1.2 1.2 0 0 0 21 14z" />
+                            </svg></span>
+                        <span class="tab-text"><span class="tab-name">Dry Cleaning</span><span class="tab-hint">Suits,
+                                sarees &amp; delicates</span></span>
+                    </button>
+                    <button class="svc-tab" role="tab" id="tab-daily-laundry" aria-controls="panel-daily-laundry"
+                        aria-selected="false" tabindex="-1" data-label="Daily Laundry">
+                        <span class="tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="3" width="16" height="18" rx="3" />
+                                <circle cx="12" cy="13" r="4" />
+                                <path d="M8 6.5h.01M11 6.5h.01" />
+                            </svg></span>
+                        <span class="tab-text"><span class="tab-name">Daily Laundry</span><span
+                                class="tab-hint">Everyday wash &amp; fold</span></span>
+                    </button>
+                    <button class="svc-tab" role="tab" id="tab-steam-ironing" aria-controls="panel-steam-ironing"
+                        aria-selected="false" tabindex="-1" data-label="Steam Ironing">
+                        <span class="tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 17h18a0 0 0 0 0 0 0c0-5-3.5-9-8.5-9H8a3 3 0 0 0-3 3z" />
+                                <path d="M8 13h.01M12 13h.01M16 13h.01M7 21c1-1 2-1 3 0s2 1 3 0 2-1 3 0" />
+                            </svg></span>
+                        <span class="tab-text"><span class="tab-name">Steam Ironing</span><span class="tab-hint">Crisp,
+                                wrinkle-free finish</span></span>
+                    </button>
+                    <button class="svc-tab" role="tab" id="tab-home-fabric" aria-controls="panel-home-fabric"
+                        aria-selected="false" tabindex="-1" data-label="Home Fabric Care">
+                        <span class="tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 11V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3" />
+                                <path d="M3 11a2 2 0 0 1 2 2v2h14v-2a2 2 0 0 1 2-2v7H3z" />
+                            </svg></span>
+                        <span class="tab-text"><span class="tab-name">Home Fabric Care</span><span
+                                class="tab-hint">Bedding, curtains &amp; more</span></span>
+                    </button>
+                </div>
+
+                <!-- Right: panels -->
+                <div class="svc-panels">
+
+                    <!-- ============ TAB 1: DRY CLEANING ============ -->
+                    <article class="svc-panel is-active" id="panel-dry-cleaning" role="tabpanel"
+                        aria-labelledby="tab-dry-cleaning" tabindex="0">
+
+                        <div class="p-hero">
+                            <div>
+                                <span class="p-kicker">Welcome to CleanD</span>
+                                <h1>Best Dry Cleaning Service in India</h1>
+                                <p class="p-tagline">Expert garment care, professionally cleaned and delivered to your
+                                    doorstep.</p>
+                                <p class="p-desc">Keep your favourite clothes looking fresh, clean, and well-maintained
+                                    with CleanD's professional dry cleaning service. From formal suits and sarees to
+                                    jackets, delicate garments, and everyday wear, we provide specialized garment care
+                                    with convenient doorstep pickup and delivery.</p>
+                                <div class="btn-container" style="margin-bottom: 20px">
+                                    <button class="pickup-btn btn">Schedule Your Pickup
+                                        <img src="/images/pickup-icon-white.webp" alt="">
+                                    </button>
+                                    <button class="whatsapp-btn btn" onclick="sendWhatsapp()">Chat on Whatsapp
+                                        <img src="/images/whatsapp-icon.webp" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="media">
+
+                                <img src="/images/new-services/services-1.jpg"
+                                    alt="Freshly dry-cleaned garments on hangers, packed and ready for delivery"
+                                    loading="eager" onerror="this.remove()">
+                                <div class="media-badge">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M1 6h13v10H1zM14 9h4l3 3v4h-7z" />
+                                        <circle cx="6" cy="18" r="2" />
+                                        <circle cx="17" cy="18" r="2" />
+                                    </svg>
+                                    <div><strong>Doorstep pickup &amp; delivery</strong>Book in a minute, we handle the
+                                        rest.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-detail">
+                            <div>
+                                <h2>Professional Dry Cleaning for Garments That Need Special Care</h2>
+                                <p class="p-desc">Some garments need more than a regular wash. Delicate fabrics,
+                                    structured clothing, occasion wear, and formal garments require appropriate cleaning
+                                    and finishing to help maintain their appearance.</p>
+                                <p class="p-desc">CleanD provides professional dry cleaning designed around the specific
+                                    requirements of eligible garments. From cleaning and stain treatment to finishing
+                                    and careful packing, your clothes are handled through a structured garment-care
+                                    process.</p>
+                                <div class="btn-container">
+                                    <button class="pickup-btn btn">Book Dry Cleaning
+                                        <img src="/images/pickup-icon-white.webp" alt="">
+                                    </button>
+                                    <a class="btn availability-btn" href="#cities">Check Service Availability</a>
+                                </div>
+                            </div>
+                            <div class="media wide">
+                                <img src="/images/new-services/services-1.jpg"
+                                    alt="Garment being inspected and finished by a professional dry cleaner"
+                                    loading="lazy" onerror="this.remove()">
+                            </div>
+                        </div>
+
+                        <!-- ===== Section: Fresh Clothes, Professional Finish, Doorstep Convenience ===== -->
+                        <section class="dc-sec" aria-labelledby="dc-conv-title">
+                            <div class="dc-conv">
+                                <div>
+                                    <h2 id="dc-conv-title">Fresh Clothes, Professional Finish, Doorstep Convenience</h2>
+                                    <p>Getting your clothes professionally cleaned shouldn't require an extra trip
+                                        across the city. CleanD brings dry cleaning convenience to your doorstep with
+                                        pickup and delivery in eligible service areas.</p>
+                                    <p>Schedule a pickup, hand over your garments, and let the professionals take care
+                                        of the cleaning and finishing. Once your order is ready, your garments are
+                                        packed and delivered back to your selected location.</p>
+                                </div>
+                                <ul class="dc-steps">
+                                    <li>
+                                        <span class="dc-step-ico dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                                stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M1 6h13v10H1zM14 9h4l3 3v4h-7z" />
+                                                <circle cx="6" cy="18" r="2" />
+                                                <circle cx="17" cy="18" r="2" />
+                                            </svg></span>
+                                        <div><b>Doorstep Pickup</b><span class="s">Schedule a pickup and hand over your
+                                                garments.</span></div>
+                                    </li>
+                                    <li>
+                                        <span class="dc-step-ico dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                                stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" />
+                                                <path d="M19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z" />
+                                            </svg></span>
+                                        <div><b>Professional Garment Care</b><span class="s">Cleaning and finishing by
+                                                professionals.</span></div>
+                                    </li>
+                                    <li>
+                                        <span class="dc-step-ico dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                                stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M3 11l9-8 9 8" />
+                                                <path d="M5 10v10h14V10" />
+                                                <path d="m9.5 15 2 2 3.5-4" />
+                                            </svg></span>
+                                        <div><b>Convenient Delivery</b><span class="s">Packed and delivered to your
+                                                selected location.</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- ===== Section: Dry Cleaning Services for Different Garment Needs ===== -->
+                        <section class="dc-sec" aria-labelledby="dc-services-title">
+                            <div class="dc-head">
+                                <h2 id="dc-services-title">Dry Cleaning Services for Different Garment Needs</h2>
+                                <p>Every garment has different care requirements. CleanD offers professional <a
+                                        href="https://cleand.in/">dry cleaning service</a> solutions for a variety of
+                                    clothing and specialty garments, subject to applicable fabric and care requirements.
+                                </p>
+                            </div>
+
+                            <div class="dc-cards">
+                                <!-- Formal wear -->
+                                <article class="dc-card">
+                                    <div class="dc-img">
+                                        <img src="/images/new-services/services-1.jpg"
+                                            alt="Suit and blazer on a hanger after professional dry cleaning"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="dc-card-body">
+                                        <h3>Formal Wear Dry Cleaning</h3>
+                                        <p>Keep suits, blazers, trousers, and other formal garments clean and
+                                            presentable with professional dry cleaning and finishing.</p>
+                                        <div class="btn-container">
+                                            <button class="pickup-btn btn">Book Formal Wear Cleaning</button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- Saree & ethnic -->
+                                <article class="dc-card">
+                                    <div class="dc-img">
+                                        <img src="/images/new-services/services-1.jpg"
+                                            alt="Suit and blazer on a hanger after professional dry cleaning"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="dc-card-body">
+                                        <h3>Saree &amp; Ethnic Wear Cleaning</h3>
+                                        <p>Special occasion clothing often requires careful handling. Professional
+                                            cleaning can help maintain the freshness and appearance of eligible sarees
+                                            and ethnic garments.</p>
+                                        <div class="btn-container">
+                                            <button class="pickup-btn btn">Book Jacket Cleaning</button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- Jacket & coat -->
+                                <article class="dc-card">
+                                    <div class="dc-img">
+                                        <img src="/images/new-services/services-1.jpg"
+                                            alt="Suit and blazer on a hanger after professional dry cleaning"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="dc-card-body">
+                                        <h3>Jacket &amp; Coat Dry Cleaning</h3>
+                                        <p>Jackets, coats, and structured outerwear can benefit from specialized garment
+                                            care. CleanD provides professional cleaning for eligible jackets and coats.
+                                        </p>
+                                        <div class="btn-container">
+                                            <button class="pickup-btn btn">Book Jacket Cleaning</button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- Delicate -->
+                                <article class="dc-card">
+                                    <div class="dc-img">
+                                        <img src="/images/new-services/services-1.jpg"
+                                            alt="Suit and blazer on a hanger after professional dry cleaning"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="dc-card-body">
+                                        <h3>Delicate Garment Cleaning</h3>
+                                        <p>Certain fabrics and garments require additional attention during cleaning.
+                                            Eligible delicate garments are handled according to their applicable care
+                                            requirements.</p>
+                                        <div class="btn-container">
+                                            <button class="pickup-btn btn">Check Garment Eligibility</button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- Occasion wear -->
+                                <article class="dc-card">
+                                    <div class="dc-img">
+                                        <img src="/images/new-services/services-1.jpg"
+                                            alt="Suit and blazer on a hanger after professional dry cleaning"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="dc-card-body">
+                                        <h3>Occasion Wear Cleaning</h3>
+                                        <p>Party wear, celebration outfits, and other special garments can be
+                                            professionally cleaned to help keep them fresh and ready for the next
+                                            occasion.</p>
+                                        <div class="btn-container">
+                                            <button class="pickup-btn btn">Schedule a Pickup</button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- ===== Section: What Can You Send for Dry Cleaning? ===== -->
+                        <section class="dc-sec" aria-labelledby="dc-accept-title">
+                            <div class="dc-head">
+                                <h2 id="dc-accept-title">What Can You Send for Dry Cleaning?</h2>
+                                <p>CleanD can help with a range of eligible garments that require professional cleaning
+                                    and finishing.</p>
+                            </div>
+
+                            <div class="dc-grid">
+                                <article class="dc-item">
+                                    <div class="dc-tile">
+                                        <img src="/images/new-services/services-1.jpg" alt="" loading="lazy"
+                                            onerror="this.remove()">
+                                    </div>
+                                    <h3>Suits &amp; Blazers</h3>
+                                    <p>Formal garments that require professional cleaning and finishing.</p>
+                                </article>
+
+                                <article class="dc-item">
+                                    <div class="dc-tile">
+                                        <img src="/images/new-services/services-1.jpg" alt="" loading="lazy"
+                                            onerror="this.remove()">
+                                    </div>
+                                    <h3>Shirts &amp; Trousers</h3>
+                                    <p>Eligible formal and premium garments that need more specialized care.</p>
+                                </article>
+
+                                <article class="dc-item">
+                                    <div class="dc-tile">
+                                        <img src="/images/new-services/services-1.jpg" alt="" loading="lazy"
+                                            onerror="this.remove()">
+                                    </div>
+                                    <h3>Sarees &amp; Ethnic Wear</h3>
+                                    <p>Selected sarees, traditional outfits, and ethnic garments subject to care
+                                        requirements.</p>
+                                </article>
+
+                                <article class="dc-item">
+                                    <div class="dc-tile">
+                                        <img src="/images/new-services/services-1.jpg" alt="" loading="lazy"
+                                            onerror="this.remove()">
+                                    </div>
+                                    <h3>Jackets &amp; Coats</h3>
+                                    <p>Outerwear that requires professional cleaning and appropriate finishing.</p>
+                                </article>
+
+                                <article class="dc-item">
+                                    <div class="dc-tile">
+                                        <img src="/images/new-services/services-1.jpg" alt="" loading="lazy"
+                                            onerror="this.remove()">
+                                    </div>
+                                    <h3>Dresses &amp; Occasion Wear</h3>
+                                    <p>Selected party wear, dresses, and special-occasion garments.</p>
+                                </article>
+
+                                <article class="dc-item">
+                                    <div class="dc-tile">
+                                        <img src="/images/new-services/services-1.jpg" alt="" loading="lazy"
+                                            onerror="this.remove()">
+                                    </div>
+                                    <h3>Delicate Garments</h3>
+                                    <p>Eligible delicate clothing that requires careful handling.</p>
+                                </article>
+
+                                <article class="dc-item dc-item--other">
+                                    <span class="dc-badge dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                            aria-hidden="true">
+                                            <path d="M12 5v14M5 12h14" />
+                                        </svg></span>
+                                    <h3>Other Eligible Garments</h3>
+                                    <p>Additional clothing items may be accepted depending on fabric, construction, care
+                                        label, and cleaning requirements.</p>
+                                    <a class="btn availability-btn" href="#cities">Check Accepted Garments</a>
+                                </article>
+                            </div>
+                        </section>
+
+
+                        <!-- ===== Section: Why Choose CleanD for Dry Cleaning Service? ===== -->
+                        <section class="dc-sec" aria-labelledby="dc-why-title">
+                            <div class="dc-head">
+                                <h2 id="dc-why-title">Why Choose CleanD for Dry Cleaning Service?</h2>
+                                <p>Professional dry cleaning should provide more than just cleaning, it should make
+                                    garment care easier and more convenient.</p>
+                            </div>
+
+                            <div class="dc-why-grid">
+                                <article class="dc-why-card">
+                                    <span class="dc-why-ico dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                            stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M12 7c0-1.2 1.8-1.6 1.8-3.2a1.8 1.8 0 1 0-3.6 0" />
+                                            <path d="M12 7 3 14a1.2 1.2 0 0 0 .8 2.1h16.4A1.2 1.2 0 0 0 21 14z" />
+                                        </svg></span>
+                                    <div>
+                                        <h3>Specialized Garment Care</h3>
+                                        <p>Garments are handled according to their applicable cleaning and care
+                                            requirements.</p>
+                                    </div>
+                                </article>
+
+                                <article class="dc-why-card">
+                                    <span class="dc-why-ico dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                            stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" />
+                                            <path d="M19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z" />
+                                        </svg></span>
+                                    <div>
+                                        <h3>Professional Cleaning &amp; Finishing</h3>
+                                        <p>Cleaning is followed by appropriate finishing to help garments look fresh and
+                                            presentable.</p>
+                                    </div>
+                                </article>
+
+                                <article class="dc-why-card">
+                                    <span class="dc-why-ico dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                            stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M3 11l9-8 9 8" />
+                                            <path d="M5 10v10h14V10" />
+                                            <path d="M10 20v-5h4v5" />
+                                        </svg></span>
+                                    <div>
+                                        <h3>Convenient Doorstep Pickup</h3>
+                                        <p>Schedule a pickup without making an additional trip to a physical cleaning
+                                            store.</p>
+                                    </div>
+                                </article>
+
+                                <article class="dc-why-card">
+                                    <span class="dc-why-ico dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                            stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg></span>
+                                    <div>
+                                        <h3>Quality Checks</h3>
+                                        <p>Orders can be checked before garments are prepared for delivery.</p>
+                                    </div>
+                                </article>
+
+                                <article class="dc-why-card">
+                                    <span class="dc-why-ico dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                            stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M1 6h13v10H1zM14 9h4l3 3v4h-7z" />
+                                            <circle cx="6" cy="18" r="2" />
+                                            <circle cx="17" cy="18" r="2" />
+                                        </svg></span>
+                                    <div>
+                                        <h3>Easy Home Delivery</h3>
+                                        <p>Receive your cleaned and professionally finished garments at your selected
+                                            location.</p>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="btn-container dc-cta">
+                                <button class="pickup-btn btn">Book a Dry Cleaning Pickup
+                                    <img src="/images/pickup-icon-white.webp" alt="">
+                                </button>
+                            </div>
+                        </section>
+
+                        <!-- ===== Section: How CleanD's Dry Cleaning Service Works ===== -->
+                        <section class="dc-sec" aria-labelledby="dc-how-title">
+                            <div class="dc-process">
+                                <div class="dc-head">
+                                    <h2 id="dc-how-title">How CleanD's Dry Cleaning Service Works</h2>
+                                    <p>From pickup to delivery, the process is designed to keep garment care simple.</p>
+                                </div>
+
+                                <ol class="dc-flow">
+                                    <li class="dc-step">
+                                        <span class="dc-step-circle dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                                stroke-linejoin="round" aria-hidden="true">
+                                                <rect x="3" y="5" width="18" height="16" rx="2" />
+                                                <path d="M3 10h18M8 3v4M16 3v4" />
+                                                <path d="m9 15 2 2 4-4" />
+                                            </svg><span class="dc-step-num" aria-hidden="true">01</span></span>
+                                        <h3>Schedule Your Pickup</h3>
+                                        <p>Select the required service and choose a convenient pickup time.</p>
+                                    </li>
+                                    <li class="dc-step">
+                                        <span class="dc-step-circle dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                                stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M5 8h14l-1 13H6z" />
+                                                <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+                                            </svg><span class="dc-step-num" aria-hidden="true">02</span></span>
+                                        <h3>Garment Collection</h3>
+                                        <p>Your eligible garments are collected from your doorstep.</p>
+                                    </li>
+                                    <li class="dc-step">
+                                        <span class="dc-step-circle dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                                stroke-linejoin="round" aria-hidden="true">
+                                                <circle cx="11" cy="11" r="6" />
+                                                <path d="m20 20-4.5-4.5" />
+                                            </svg><span class="dc-step-num" aria-hidden="true">03</span></span>
+                                        <h3>Inspection &amp; Sorting</h3>
+                                        <p>Garments are assessed and sorted according to their cleaning and care
+                                            requirements.</p>
+                                    </li>
+                                    <li class="dc-step">
+                                        <span class="dc-step-circle dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                                stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z" />
+                                                <path d="M9.5 14.5a2.6 2.6 0 0 0 2.5 2.5" />
+                                            </svg><span class="dc-step-num" aria-hidden="true">04</span></span>
+                                        <h3>Professional Cleaning</h3>
+                                        <p>Eligible garments go through the applicable professional cleaning process,
+                                            including appropriate stain treatment where required.</p>
+                                    </li>
+                                    <li class="dc-step">
+                                        <span class="dc-step-circle dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                                stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M12 7c0-1.2 1.8-1.6 1.8-3.2a1.8 1.8 0 1 0-3.6 0" />
+                                                <path d="M12 7 3 14a1.2 1.2 0 0 0 .8 2.1h16.4A1.2 1.2 0 0 0 21 14z" />
+                                            </svg><span class="dc-step-num" aria-hidden="true">05</span></span>
+                                        <h3>Finishing &amp; Quality Check</h3>
+                                        <p>After cleaning, garments are finished, checked, packed, and prepared for
+                                            delivery.</p>
+                                    </li>
+                                    <li class="dc-step">
+                                        <span class="dc-step-circle dc-ico"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                                stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M1 6h13v10H1zM14 9h4l3 3v4h-7z" />
+                                                <circle cx="6" cy="18" r="2" />
+                                                <circle cx="17" cy="18" r="2" />
+                                            </svg><span class="dc-step-num" aria-hidden="true">06</span></span>
+                                        <h3>Doorstep Delivery</h3>
+                                        <p>Your processed garments are delivered back to your selected location.</p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+
+
+                        <!-- ===== Section: Dry Cleaning Pickup and Delivery at Your Doorstep ===== -->
+                        <section class="dc-sec" aria-labelledby="dc-pickup-title">
+                            <div class="dc-panel dc-split">
+                                <div class="dc-copy">
+                                    <div class="dc-head">
+                                        <h2 id="dc-pickup-title">Dry Cleaning Pickup and Delivery at Your Doorstep</h2>
+                                        <p>Why spend time travelling to a dry cleaner when you can arrange professional
+                                            garment care from home?</p>
+                                        <p>With CleanD's doorstep pickup and delivery service, you can schedule a
+                                            collection from an eligible service area and have your garments returned
+                                            after processing. Availability, pickup slots, and delivery timelines depend
+                                            on your location and selected service.</p>
+                                    </div>
+
+                                    <div class="dc-actions">
+                                        <div class="btn-container">
+                                            <button class="pickup-btn btn">Schedule a Pickup
+                                                <img src="/images/pickup-icon-white.webp" alt="">
+                                            </button>
+                                        </div>
+
+                                        <!-- Pincode / service-area checker -->
+                                        <form class="dc-pin" id="dc-pin-form" novalidate>
+                                            <label class="dc-sr" for="dc-pin-input">Enter your 6-digit pincode</label>
+                                            <input id="dc-pin-input" type="text" inputmode="numeric"
+                                                autocomplete="postal-code" maxlength="6" placeholder="Enter pincode">
+                                            <button type="submit" class="btn availability-btn">Check Service
+                                                Availability</button>
+                                        </form>
+                                        <p class="dc-pin-msg" id="dc-pin-msg" role="status" aria-live="polite"></p>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <img src="/images/new-services/services-1.jpg"
+                                        alt="Professionally packed garment order handed to a customer at their doorstep"
+                                        loading="lazy" onerror="this.remove()">
+                                    <div class="media-badge">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M3 11l9-8 9 8" />
+                                            <path d="M5 10v10h14V10" />
+                                            <path d="m9.5 15 2 2 3.5-4" />
+                                        </svg>
+                                        <div><strong>Delivered to your selected location</strong>Pickup slots depend on
+                                            your area.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- ===== Section: Professional Dry Cleaning Without the Extra Hassle ===== -->
+                        <section class="dc-sec" aria-labelledby="dc-hassle-title">
+                            <div class="dc-split">
+                                <div class="dc-copy">
+                                    <div class="dc-head">
+                                        <h2 id="dc-hassle-title">Professional Dry Cleaning Without the Extra Hassle</h2>
+                                        <p>Your wardrobe deserves proper care, especially when it comes to garments you
+                                            wear for work, celebrations, travel, and important occasions.</p>
+                                        <p>Instead of trying to clean delicate or structured garments at home,
+                                            professional dry cleaning offers a convenient way to care for eligible
+                                            clothing. CleanD combines professional garment processing with doorstep
+                                            convenience, helping you spend less time managing clothing care.</p>
+                                    </div>
+                                </div>
+                                <ul class="dc-stack">
+                                    <li>
+                                        <span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                                                aria-hidden="true">
+                                                <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" />
+                                                <path d="M19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z" />
+                                            </svg></span>
+                                        Fresh garments.
+                                    </li>
+                                    <li>
+                                        <span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                                                aria-hidden="true">
+                                                <path d="M12 7c0-1.2 1.8-1.6 1.8-3.2a1.8 1.8 0 1 0-3.6 0" />
+                                                <path d="M12 7 3 14a1.2 1.2 0 0 0 .8 2.1h16.4A1.2 1.2 0 0 0 21 14z" />
+                                            </svg></span>
+                                        Professional finishing.
+                                    </li>
+                                    <li>
+                                        <span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                                                aria-hidden="true">
+                                                <path d="M1 6h13v10H1zM14 9h4l3 3v4h-7z" />
+                                                <circle cx="6" cy="18" r="2" />
+                                                <circle cx="17" cy="18" r="2" />
+                                            </svg></span>
+                                        Convenient doorstep service.
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- ===== Section: Dry Cleaning Pricing (your existing rate card follows right after this) ===== -->
+                        <section class="dc-sec" aria-labelledby="dc-pricing-title">
+                            <div class="dc-head dc-price-head">
+                                <div>
+                                    <h2 id="dc-pricing-title">Dry Cleaning Pricing</h2>
+                                    <p>Dry cleaning prices may vary depending on the garment type, quantity, fabric,
+                                        cleaning requirements, and any additional treatment that may be applicable.</p>
+                                </div>
+                                <div class="dc-price-note">
+                                    <span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <path d="M20 12 12 20 4 12V4h8z" />
+                                            <circle cx="8.5" cy="8.5" r="1" />
+                                        </svg></span>
+                                    <span>CleanD customers can check the current price applicable to their selected
+                                        garment or service before placing an order.</span>
+                                </div>
+
+                                <div class="rate-card">
+                                    <div class="rate-head">
+                                        <span class="rate-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M6 4h12M6 9h12M9 4c5 0 6 5 0 5l6 8" />
+                                            </svg></span>
+                                        <h3>Service Rate Card</h3>
+                                    </div>
+                                    <p class="rate-note">Transparent pricing with no hidden costs. Final charges may
+                                        vary by
+                                        item type and quantity.</p>
+                                    <ul class="rate-list">
+                                        <li><span>Shirt / Top</span><span class="price">₹99/piece</span></li>
+                                        <li><span>Trousers / Jeans</span><span class="price">₹120/piece</span></li>
+                                        <li><span>Suit (2 piece)</span><span class="price">₹499</span></li>
+                                        <li><span>Saree</span><span class="price">₹249/piece</span></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <!-- ===== Section: A Better Way to Care for Your Wardrobe ===== -->
+                        <section class="dc-sec" aria-labelledby="dc-wardrobe-title">
+                            <div class="dc-panel dc-split dc-split--rev">
+                                <div class="media">
+                                    <img src="/images/new-services/services-1.jpg"
+                                        alt="Neatly arranged, freshly cleaned garments in a wardrobe" loading="lazy"
+                                        onerror="this.remove()">
+                                </div>
+                                <div class="dc-copy">
+                                    <div class="dc-head">
+                                        <h2 id="dc-wardrobe-title">A Better Way to Care for Your Wardrobe</h2>
+                                        <p>Dry cleaning is particularly useful when garments need specialized cleaning
+                                            rather than conventional washing. Professional garment care can help keep
+                                            eligible clothing fresh and presentable while reducing the effort involved
+                                            in maintaining your wardrobe.</p>
+                                        <p>Whether you need occasional cleaning for formal wear or regular care for
+                                            selected garments, CleanD provides a convenient solution with doorstep
+                                            pickup and delivery.</p>
+                                    </div>
+                                    <div class="btn-container">
+                                        <button class="pickup-btn btn">Book Your Dry Cleaning Pickup
+                                            <img src="/images/pickup-icon-white.webp" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- ===== Section: Ready to Give Your Clothes Professional Care? (CTA banner) ===== -->
+                        <section class="dc-sec" aria-labelledby="dc-final-title">
+                            <div class="dc-banner">
+                                <h2 id="dc-final-title">Ready to Give Your Clothes Professional Care?</h2>
+                                <p>From your favourite suit to your special-occasion saree, CleanD makes professional
+                                    garment care easier. Schedule a pickup, let our service handle the cleaning and
+                                    finishing, and receive your processed garments back at your doorstep.</p>
+                                <div class="cta-btn-container">
+                                    <button class="cta-pickup-btn cta-btn">Book Dry Cleaning
+                                        <img src="/images/pickup-icon.webp" alt="">
+                                    </button>
+                                    <button class="cta-price-btn cta-btn" href="#dc-rates">Check Prices</button>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </article>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== 3. CITIES ===================== -->
+        <section class="svc-cities" id="cities">
+            <div class="section-container">
+                <p class="eyebrow">Available across India</p>
+                <h2>Daily Laundry — We're Servicing in These Cities</h2>
+                <p class="sub">Book Daily Laundry with doorstep pickup &amp; delivery in your nearest city.</p>
+                <ul class="city-list">
+                    <li>Mira-Bhayandar</li>
+                    <li>Mumbai</li>
+                    <li>Dhanbad</li>
+                    <li>Ranchi</li>
+                    <li>Pune</li>
+                    <li>Tezpur</li>
+                    <li>Guwahati</li>
+                    <li>Jorhat</li>
+                    <li>Naharlagun</li>
+                    <li>Hyderabad</li>
+                    <li>Kohima</li>
+                    <li>Bhopal</li>
+                    <li>Panchkula</li>
+                    <li>Shimla</li>
+                    <li>Panipat</li>
+                    <li>Sonipat</li>
+                    <li>Karnal</li>
+                    <li>Dharamshala</li>
+                    <li>Solan</li>
+                    <li>Manali</li>
+                    <li>Ambala</li>
+                    <li>Rohtak</li>
+                    <li>Baddi</li>
+                    <li>Mandi</li>
+                    <li>Kullu</li>
+                    <li>Allahabad</li>
+                    <li>Dimapur</li>
+                    <li>Hazaribag</li>
+                    <li>Lakhisarai</li>
+                    <li>Gangtok</li>
+                    <li>Jaipur</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===================== 4. FAQ ===================== -->
+        <section class="svc-faq" id="faq">
+            <div class="section-container">
+                <div class="faq-grid">
+                    <div class="faq-intro">
+                        <h2>Frequently Asked Questions</h2>
+                        <p>Everything you need to know about pickup, pricing and garment care. Can't find your answer?
+                            Message us and we'll help.</p>
+                        <div class="btn-container">
+                            <button class="whatsapp-btn btn" onclick="sendWhatsapp()">Chat on Whatsapp
+                                <img src="/images/whatsapp-icon.webp" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="faq-list">
+                        <details class="faq-item" open>
+                            <summary>How do I schedule a pickup?</summary>
+                            <div class="faq-a">Tap "Schedule Your Pickup", choose your service and a convenient time
+                                slot,
+                                and our team will collect your clothes from your doorstep.</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Which garments are suitable for dry cleaning?</summary>
+                            <div class="faq-a">Suits, blazers, sarees, jackets, lehengas and other delicate or
+                                structured
+                                garments are usually best dry cleaned. Check the care label, or message us if you're
+                                unsure.
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>How long does it take to get my clothes back?</summary>
+                            <div class="faq-a">Turnaround depends on the service and your city. Your pickup confirmation
+                                will show the expected delivery time.</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Are there any hidden charges?</summary>
+                            <div class="faq-a">No. Our rate card shows the price per item or per kg. Final charges may
+                                vary
+                                by item type and quantity, and you'll see the total before we deliver.</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Can you remove every stain?</summary>
+                            <div class="faq-a">We treat stains using methods suited to the fabric. Some stains,
+                                especially
+                                old or set-in ones, may not come out fully, and we'll tell you if we expect that.</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Is the service available in my city?</summary>
+                            <div class="faq-a">Check the list of cities above. If yours isn't there yet, message us on
+                                WhatsApp and we'll let you know when we expand.</div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="section-container slide-up">
+            <div class="footer-top-bar">
+                <span>FASTER</span>
+                <span>|</span>
+                <span>FRESHER</span>
+                <span>|</span>
+                <span>HEALTHIER</span>
+            </div>
+
+            <ul class="footer-nav-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="near-me.html">Near Me</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="franchise.html">Franchise</a></li>
+                <li><a href="store.html">My Stores</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="career.html">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <div class="footer-city">
+                <h4>Where we are -</h4>
+
+                <ul class="footer-nav-links footer-nav-links-city">
+                    <li><a href="city.html">Gurgaon</a></li>
+                    <li><a href="city.html">Noida</a></li>
+                    <li><a href="city.html">Chennai</a></li>
+                    <li><a href="city.html">Lucknow</a></li>
+                    <li><a href="city.html">Gwalior</a></li>
+                    <li><a href="city.html">Indore</a></li>
+                    <li><a href="city.html">Pune</a></li>
+                    <li><a href="city.html">Jaipur</a></li>
+                    <li><a href="city.html">Udaipur</a></li>
+                    <li><a href="city.html">Ranchi</a></li>
+                    <li><a href="city.html">Gurgaon</a></li>
+                    <li><a href="city.html">Noida</a></li>
+                    <li><a href="city.html">Chennai</a></li>
+                    <li><a href="city.html">Lucknow</a></li>
+                    <li><a href="city.html">Gwalior</a></li>
+                    <li><a href="city.html">Indore</a></li>
+                    <li><a href="city.html">Pune</a></li>
+                    <li><a href="city.html">Jaipur</a></li>
+                    <li><a href="city.html">Udaipur</a></li>
+                    <li><a href="city.html">Ranchi</a></li>
+                    <li><a href="city.html">Gurgaon</a></li>
+                    <li><a href="city.html">Noida</a></li>
+                    <li><a href="city.html">Chennai</a></li>
+                    <li><a href="city.html">Lucknow</a></li>
+                    <li><a href="city.html">Gwalior</a></li>
+                    <li><a href="city.html">Indore</a></li>
+                    <li><a href="city.html">Pune</a></li>
+                    <li><a href="city.html">Jaipur</a></li>
+                    <li><a href="city.html">Udaipur</a></li>
+                    <li><a href="city.html">Ranchi</a></li>
+                    <li><a href="city.html">Gurgaon</a></li>
+                    <li><a href="city.html">Noida</a></li>
+                    <li><a href="city.html">Chennai</a></li>
+                    <li><a href="city.html">Lucknow</a></li>
+                    <li><a href="city.html">Gwalior</a></li>
+                    <li><a href="city.html">Indore</a></li>
+                    <li><a href="city.html">Pune</a></li>
+                    <li><a href="city.html">Jaipur</a></li>
+                    <li><a href="city.html">Udaipur</a></li>
+                    <li><a href="city.html">Ranchi</a></li>
+                    <li><a href="city.html">Gurgaon</a></li>
+                    <li><a href="city.html">Noida</a></li>
+                    <li><a href="city.html">Chennai</a></li>
+                    <li><a href="city.html">Lucknow</a></li>
+                    <li><a href="city.html">Gwalior</a></li>
+                    <li><a href="city.html">Indore</a></li>
+                    <li><a href="city.html">Pune</a></li>
+                    <li><a href="city.html">Jaipur</a></li>
+                    <li><a href="city.html">Udaipur</a></li>
+                    <li><a href="city.html">Ranchi</a></li>
+                    <li><a href="city.html">Gurgaon</a></li>
+                    <li><a href="city.html">Noida</a></li>
+                    <li><a href="city.html">Chennai</a></li>
+                    <li><a href="city.html">Lucknow</a></li>
+                    <li><a href="city.html">Gwalior</a></li>
+                    <li><a href="city.html">Indore</a></li>
+                    <li><a href="city.html">Pune</a></li>
+                    <li><a href="city.html">Jaipur</a></li>
+                    <li><a href="city.html">Udaipur</a></li>
+                    <li><a href="city.html">Ranchi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <img src="images/cleand-R-logo-white.png" alt="">
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100087893991939" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/cleand.in/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/vcleen/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-download">
+                    <a href="https://apps.apple.com/in/app/cleand-the-laundry-spa/id6444508188" target="_blank"><img
+                            src="images/appstore.png" alt=""></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.ctls.application" target="_blank"><img
+                            src="images/googleplay.png" alt=""></a>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 Cleand – The Laundry Spa | A Venture of Softsweep India Private Limited</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script for navbar -->
+    <script>
+        const mobileBtn = document.querySelector('.mobile-nav-toggle');
+        const navMenu = document.querySelector('.navmenu');
+        const navLinks = document.querySelectorAll('.navmenu a');
+
+        // --- Active Link Logic ---
+        const currentUrl = window.location.href;
+
+        navLinks.forEach(link => {
+            // Check if the link's href matches the current URL
+            if (link.href === currentUrl) {
+                link.classList.add('active');
+            }
+        });
+
+        // --- Mobile Toggle Logic ---
+        mobileBtn.addEventListener('click', () => {
+            mobileBtn.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileBtn.classList.remove('active');
+                navMenu.classList.remove('open');
+            });
+        });
+    </script>
+
+    <!-- fixed button on screen -->
+    <script>
+        function callPhone() {
+            const phoneNumber = "918423123458";
+            window.open(`tel:${phoneNumber}`, "_self");
+        }
+        function downloadApp() {
+        }
+        function sendWhatsapp() {
+            const phoneNumber = "919663123457";
+            const message = "Hello! I would like to inquire about your laundry services.";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, "_blank");
+        }
+    </script>
+
+    <!-- script for slide up animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Create the "Eye" (Observer)
+            const slideUpObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // If the element enters the screen
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+
+                        // Once it has slid up, stop watching it (until refresh)
+                        slideUpObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0, // Starts when 0% of the element is visible
+                rootMargin: "0px 0px -50px 0px" // Slight offset so it triggers before it hits the very bottom
+            });
+
+            // Find everything with the "slide-up" class and start watching it
+            const slideUpElements = document.querySelectorAll('.slide-up');
+            slideUpElements.forEach(el => slideUpObserver.observe(el));
+
+        });
+    </script>
+
+
+
+    <!--  Pincode checker for the Dry Cleaning tab  -->
+    <script>
+        (function () {
+            var form = document.getElementById('dc-pin-form');
+            if (!form) return;
+            var input = document.getElementById('dc-pin-input');
+            var msg = document.getElementById('dc-pin-msg');
+
+            // OPTION A: list the pincodes you serve, as strings, e.g. ['302001', '302017']
+            var SERVICEABLE_PINCODES = [];
+            // OPTION B: define window.cleandCheckPincode = function (pin) { return Promise<boolean> } on your site
+            //           to check against your API / database instead.
+
+            function show(text, type) {
+                msg.textContent = text;
+                msg.className = 'dc-pin-msg' + (type ? ' is-' + type : '');
+            }
+
+            input.addEventListener('input', function () {
+                input.value = input.value.replace(/\D/g, '').slice(0, 6);
+                if (msg.textContent) show('', '');
+            });
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var pin = input.value.trim();
+                if (!/^\d{6}$/.test(pin)) { show('Please enter a valid 6-digit pincode.', 'err'); input.focus(); return; }
+
+                if (typeof window.cleandCheckPincode === 'function') {
+                    show('Checking…', '');
+                    Promise.resolve(window.cleandCheckPincode(pin)).then(function (ok) {
+                        ok ? show('Good news! We pick up and deliver at ' + pin + '.', 'ok')
+                            : show('Sorry, we are not available at ' + pin + ' yet.', 'err');
+                    }).catch(function () { show('Could not check right now. Please try again.', 'err'); });
+                } else if (SERVICEABLE_PINCODES.length) {
+                    SERVICEABLE_PINCODES.indexOf(pin) > -1
+                        ? show('Good news! We pick up and deliver at ' + pin + '.', 'ok')
+                        : show('Sorry, we are not available at ' + pin + ' yet.', 'err');
+                } else {
+                    show('Thanks! We will confirm service for ' + pin + ' when you schedule your pickup.', '');
+                }
+            });
+        })();
+    </script>
+
+
+    <!-- for tabing system -->
+    <script>
+        (function () {
+            var tabs = Array.prototype.slice.call(document.querySelectorAll('.svc-tab'));
+            var panels = Array.prototype.slice.call(document.querySelectorAll('.svc-panel'));
+            var crumb = document.getElementById('crumb-current');
+
+            function activate(tab, focus, updateHash) {
+                tabs.forEach(function (t) {
+                    var on = t === tab;
+                    t.setAttribute('aria-selected', on ? 'true' : 'false');
+                    t.tabIndex = on ? 0 : -1;
+                });
+                panels.forEach(function (p) {
+                    var on = p.id === tab.getAttribute('aria-controls');
+                    p.classList.toggle('is-active', on);
+                    p.hidden = !on;
+                });
+                if (crumb) crumb.textContent = tab.getAttribute('data-label');
+                if (focus) tab.focus();
+                if (updateHash && history.replaceState) {
+                    history.replaceState(null, '', '#' + tab.id.replace('tab-', ''));
+                }
+                // keep the active tab visible in the horizontal mobile tab bar
+                if (tab.scrollIntoView) tab.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+            }
+
+            tabs.forEach(function (tab, i) {
+                tab.addEventListener('click', function () { activate(tab, false, true); });
+                tab.addEventListener('keydown', function (e) {
+                    var next = null;
+                    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+                    if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+                    if (e.key === 'Home') next = tabs[0];
+                    if (e.key === 'End') next = tabs[tabs.length - 1];
+                    if (next) { e.preventDefault(); activate(next, true, true); }
+                });
+            });
+
+            // open the right tab from the URL, e.g. services.html#daily-laundry
+            function fromHash() {
+                var id = location.hash.replace('#', '');
+                var t = id && document.getElementById('tab-' + id);
+                if (t) activate(t, false, false);
+            }
+            fromHash();
+            window.addEventListener('hashchange', fromHash);
+        })();
+    </script>
+</body>
+
+</html>
