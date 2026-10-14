@@ -468,7 +468,7 @@
 }
 
 .faq-intro h2 {
-    font-size: clamp(24px, 3.2vw, 38px);
+    font-size: clamp(24px, 3.2vw, 34px);
     line-height: 1.2;
     font-weight: 900;
 }

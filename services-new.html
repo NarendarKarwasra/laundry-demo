@@ -851,7 +851,7 @@
             <div class="section-container">
                 <div class="faq-grid">
                     <div class="faq-intro">
-                        <h2>Frequently Asked Questions</h2>
+                        <h2>Frequently Asked Questions About Best Dry Cleaning Service in India</h2>
                         <p>Everything you need to know about pickup, pricing and garment care. Can't find your answer?
                             Message us and we'll help.</p>
                         <div class="btn-container">
@@ -863,40 +863,53 @@
 
                     <div class="faq-list">
                         <details class="faq-item" open>
-                            <summary>How do I schedule a pickup?</summary>
-                            <div class="faq-a">Tap "Schedule Your Pickup", choose your service and a convenient time
-                                slot,
-                                and our team will collect your clothes from your doorstep.</div>
+                            <summary>What is dry cleaning?</summary>
+                            <div class="faq-a">Dry cleaning is a professional garment-cleaning process designed for eligible clothing that may require specialized cleaning rather than conventional home washing. The applicable process depends on the garment and its care requirements.</div>
                         </details>
                         <details class="faq-item">
-                            <summary>Which garments are suitable for dry cleaning?</summary>
-                            <div class="faq-a">Suits, blazers, sarees, jackets, lehengas and other delicate or
-                                structured
-                                garments are usually best dry cleaned. Check the care label, or message us if you're
-                                unsure.
+                            <summary>What clothes can be dry cleaned?</summary>
+                            <div class="faq-a">Eligible garments may include suits, blazers, jackets, coats, sarees, ethnic wear, dresses, formal clothing, and selected delicate garments. Acceptance depends on the fabric, construction, care label, and applicable cleaning requirements.
                             </div>
                         </details>
                         <details class="faq-item">
-                            <summary>How long does it take to get my clothes back?</summary>
-                            <div class="faq-a">Turnaround depends on the service and your city. Your pickup confirmation
-                                will show the expected delivery time.</div>
+                            <summary>Is dry cleaning suitable for delicate clothes?</summary>
+                            <div class="faq-a">Some delicate garments can be professionally dry cleaned, but suitability depends on the fabric, garment construction, care instructions, and cleaning requirements. Garments should be assessed before processing.</div>
                         </details>
                         <details class="faq-item">
-                            <summary>Are there any hidden charges?</summary>
-                            <div class="faq-a">No. Our rate card shows the price per item or per kg. Final charges may
-                                vary
-                                by item type and quantity, and you'll see the total before we deliver.</div>
+                            <summary>Does dry cleaning remove stains?</summary>
+                            <div class="faq-a">Professional cleaning can help address many types of stains, but results vary depending on the stain type, fabric, age of the stain, and previous treatment. Some stains may not be completely removable.</div>
                         </details>
                         <details class="faq-item">
-                            <summary>Can you remove every stain?</summary>
-                            <div class="faq-a">We treat stains using methods suited to the fabric. Some stains,
-                                especially
-                                old or set-in ones, may not come out fully, and we'll tell you if we expect that.</div>
+                            <summary>How does CleanD's dry cleaning pickup work?</summary>
+                            <div class="faq-a">You select the required service and schedule a pickup. CleanD collects your eligible garments, processes them according to applicable requirements, and delivers the completed order back to your selected location.</div>
                         </details>
                         <details class="faq-item">
-                            <summary>Is the service available in my city?</summary>
-                            <div class="faq-a">Check the list of cities above. If yours isn't there yet, message us on
-                                WhatsApp and we'll let you know when we expand.</div>
+                            <summary>Do you provide doorstep dry cleaning pickup and delivery?</summary>
+                            <div class="faq-a">Yes, doorstep pickup and delivery are available in eligible service areas, subject to service availability and the selected schedule.</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>How long does dry cleaning take?</summary>
+                            <div class="faq-a">Turnaround time can vary depending on the garment type, cleaning requirements, order quantity, location, and selected service. The applicable turnaround can be confirmed when placing your order.</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>How much does dry cleaning cost?</summary>
+                            <div class="faq-a">Pricing depends on the garment, service selected, quantity, and any additional requirements. Check CleanD's current pricing for the applicable rates.</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Can I schedule dry cleaning pickup online?</summary>
+                            <div class="faq-a">Yes, customers can choose the applicable service, check availability, and schedule a convenient pickup online where CleanD's service is available.</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Is dry cleaning better than regular washing?</summary>
+                            <div class="faq-a">Dry cleaning and regular washing serve different garment-care needs. Some garments are suitable for conventional washing, while others may require specialized cleaning based on their fabric, construction, and care label.</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Can I send suits and formal wear for dry cleaning?</summary>
+                            <div class="faq-a">Eligible suits, blazers, trousers, and other formal garments can be submitted for professional dry cleaning, subject to their care requirements and service eligibility.</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Can sarees and ethnic wear be dry cleaned?</summary>
+                            <div class="faq-a">Selected sarees and ethnic garments may be accepted for dry cleaning depending on their fabric, embellishments, construction, and care instructions.</div>
                         </details>
                     </div>
                 </div>
@@ -1101,6 +1114,32 @@
 
         });
     </script>
+
+
+    <!-- faq -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(
+        ".svc-faq .faq-list .faq-item"
+    );
+
+    faqItems.forEach((item) => {
+        item.addEventListener("toggle", function () {
+            if (this.open) {
+                faqItems.forEach((otherItem) => {
+                    if (otherItem !== this && otherItem.open) {
+                        otherItem.open = false;
+                    }
+                });
+            }
+        });
+    });
+});
+
+</script>
+
 
 
 
